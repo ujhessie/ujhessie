@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;300;400&family=Josefin+Sans:wght@100;400&display=swap');
 * {
     border: 0; padding: 0; margin: 0; text-decoration: none;
 }
+
 
 /* === navegacao da pagina === */
 
@@ -61,19 +63,26 @@ html {
     width: 300px;
     margin: 10px;
 }
-.div-desc-home > h1, .div-desc-home > h1 > a {
-    background-image: linear-gradient(to bottom, rebeccapurple, steelblue, turquoise);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip:text;
+.h1, .h1> a {
     color: white;
-    font-family: Arial;
-    font-size: 30px;
-    margin-bottom: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 22px;
     text-transform: uppercase;
 }
+.h2 {
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.desc-h {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
 .img-home {
-    width: 250px;
+    width: 200px;
     border-radius: 50% 70px;
     border: 5px dashed purple;
     margin: 10px;
