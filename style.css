@@ -1,5 +1,5 @@
 * {
-    border: 0; padding: 0; margin: 0;
+    border: 0; padding: 0; margin: 0; text-decoration: none;
 }
 
 /* === navegacao da pagina === */
@@ -12,10 +12,12 @@ html {
      
 }
 .div-content-nav-principal {
+    width: 100%;
+    max-width: 900px;
+    background-color: #00000052;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    max-width: 900px;
     position: fixed;
     left: 50%;
     transform: translate(-50%, 0);
@@ -37,9 +39,42 @@ html {
 .sec {
     min-height: 800px;
     border: 1px solid #bbb;
-    padding-top: 25px;
+    padding-top: 40px;
 }
 
 #sec-home {
+    min-height: 00px;
     background-image: linear-gradient(90deg, #8099E9, #E99DCB);
+    text-align: center;
+}
+.welcome-home {
+    font-size: 22px;
+    margin: 10px;
+}
+.content-home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+.div-desc-home {
+    width: 300px;
+    margin: 10px;
+}
+.div-desc-home > h1, .div-desc-home > h1 > a {
+    background-image: linear-gradient(to bottom, rebeccapurple, steelblue, turquoise);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip:text;
+    color: white;
+    font-family: Arial;
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.img-home {
+    width: 250px;
+    border-radius: 50% 70px;
+    border: 5px dashed purple;
+    margin: 10px;
 }
