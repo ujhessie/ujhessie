@@ -1,90 +1,112 @@
+/* IMPORTACOES */
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;300;400&family=Josefin+Sans:wght@100;400&display=swap');
+/* IMPORTACOES */
+
 * {
     border: 0; padding: 0; margin: 0; text-decoration: none;
 }
 
 
 /* === navegacao da pagina === */
-
 html {
     scroll-behavior: smooth;
 }
-
-#nav-principal {
-     
+#icon-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
-.div-content-nav-principal {
-    width: 100%;
-    max-width: 900px;
-    background-color: #00000052;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%, 0);
+header {
+  box-sizing: border-box;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  position: fixed;
+  background-color: black;
 }
-
-.item-nav-principal {
-    padding: 10px;
-    font-family: Arial;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #fff;
-    font-weight: 400;
+header ul {
+  list-style: none;
+  display: flex;
+  gap: .5rem;
+}
+header a {
+  color: white;
+  font-family:  sans-serif;
+  padding: 1rem;
+  border-radius: 10px;
+}
+header a:hover {
+  background: #6565654b;
 }
 /* === navegacao da pagina === */
 
 
+/*section-global*/
+.sec, footer {
+  height: 100vh;
+  width: 100%;
+  padding-top: 70px;
+  box-sizing: border-box;
+}
 /* === sec-home === */
-
-.sec {
-    min-height: 800px;
-    border: 1px solid #bbb;
-    padding-top: 40px;
-}
-
 #sec-home {
-    min-height: 00px;
-    background-image: linear-gradient(90deg, #8099E9, #E99DCB);
-    text-align: center;
+  background: linear-gradient(90deg, #003554, #051923);
 }
-.welcome-home {
-    font-size: 16px;
-    font-family: 'Josefin Sans', sans-serif;
-    margin: 8px;
+#welcome {
+  color: white;
+  font-size: 1rem;
+  font-family: Sans-Serif;
+  text-align: center;
+  padding: .5rem;
+  margin-top: 10px;
 }
-.content-home {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 20px;
+.content-sec-home {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 20px auto;
 }
-.div-desc-home {
-    width: 300px;
-    margin: 10px;
+.img-profile {
+  width: 250px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
 }
-.h1, .h1> a {
-    color: white;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 22px;
-    text-transform: uppercase;
+.s-c-h {
+  box-sizing: border-box;
+  padding: 20px;
+  max-width: 700px;
+  display: block;
+  margin: 0 auto;
 }
-.h2 {
-    color: white;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 18px;
-    text-transform: uppercase;
+.s-c-h  h1, .s-c-h > h1 > a{
+  color: white;
+  font-family: Sans-Serif;
+  text-align: center;
+  font-size: 2rem;
 }
-.desc-h {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 16px;
-    margin-top: 5px;
-    margin-bottom: 20px;
+.s-c-h p {
+  text-align: center;
+  color: #b0b0b0;
+  font-size: 1.5rem;
+  padding: 10px;
+  font-family: Sans-Serif;
 }
-.img-home {
-    width: 200px;
-    border-radius: 50% 70px;
-    border: 5px dashed purple;
-    margin: 10px;
+.a-next {
+  text-align: center;
+  display: block;
+  color: white;
+  font-size: 1.8rem;
+  font-family: Sans-Serif;
+  padding: 10px;
+  background-color:#0582CA;
+  border-radius: 20px;
+  margin-top: 10px;
 }
+.a-next:hover {
+  background-color: #003554;
+  border-radius: 20px;
+}
+/* === sec-home === */
