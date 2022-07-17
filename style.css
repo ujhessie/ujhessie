@@ -50,9 +50,16 @@ header a:hover {
   padding-top: 70px;
   box-sizing: border-box;
 }
+.title-sec {
+  text-align: center;
+  font-family: Sans-Serif;
+  font-weight: bold;
+  font-size: 2rem;
+}
 /* === sec-home === */
 #sec-home {
   background: linear-gradient(90deg, #003554, #051923);
+  min-height: 100vh;
 }
 #welcome {
   color: white;
@@ -109,4 +116,41 @@ header a:hover {
   background-color: #003554;
   border-radius: 20px;
 }
+.redes-sociais-home {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.redes-sociais-home img {
+  width: 3.5rem;
+  padding: 3px;
+  background-color: white;
+  border-radius: 50%;
+}
 /* === sec-home === */
+
+
+
+/* === sec-sobre */
+#title-sec-sobre {
+  color: white;
+}
+#sec-sobre {
+  background: #051923;
+  color: white;
+  font-family: Sans-Serif;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.content-sec-sobre {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.s-c-s, .s-c-s-2 {
+  box-sizing: border-box;
+  width: 400px;
+  padding: 10px;
+}
+/* === sec-sobre */
