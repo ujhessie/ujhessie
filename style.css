@@ -179,6 +179,9 @@ header a:hover {
   font-size: 1rem;
   font-family: Arial;
 }
+.s-c-s p {
+  color: #bbb;
+}
 .s-c-s-2 {
   display: flex;
   flex-wrap: wrap;
@@ -188,4 +191,22 @@ header a:hover {
 .s-c-s-2  img{
   width: 60px;
 }
+.download-cv {
+  text-align: center;
+  display: block;
+  color: white;
+  font-size: 1.8rem;
+  font-family: Sans-Serif;
+  padding: 10px;
+  background-color:#0582CA;
+  border-radius: 20px;
+  margin: 10px auto;
+  max-width: 600px;
+  box-sizing: border-box;
+}
 /* === sec-sobre */
+
+
+/* === sec-projetos === */
+
+/* === sec-projetos === */
