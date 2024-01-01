@@ -1,7 +1,7 @@
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
-import PageInicio from "./components/pages/PageInicio";
-import PageTodosProjetos from "./components/pages/PageTodosProjetos";
-import ProjectDetail from "./ProjectDetail";
+import PageInicio from "./components/rotas/RotaInicio";
+import PageTodosProjetos from "./components/rotas/RotaProjetos";
+import ProjetoDetalhes from './components/rotas/ProjetoDetalhes';
 import Header from "./components/layouts/Header";
 import Footer from "./components/layouts/Footer";
 import SecContatos from './components/sections/SecContatos';
@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<PageInicio />} />
           <Route path="/todosprojetos" element={<PageTodosProjetos />} />
-          <Route path="/projeto/:projectId" element={<ProjectDetail />} />
+          <Route path="/projeto/:projectId" element={<ProjetoDetalhes />} />
           <Route path="*" element={<PageInicio />} />
         </Routes>
       </main>

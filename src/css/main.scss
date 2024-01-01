@@ -44,9 +44,11 @@ body {
         font-weight: 700;
         
         span {
-            text-shadow: 0 0 5px $cor_principal;
+            color: $cor_fonte_branca;
             font-size: 100%;
-            color: $cor_principal;
+            background-color: $cor_principal;
+            padding: 4px;
+            
         }
         a {
             font-size: 100%;
@@ -109,11 +111,7 @@ body {
         h2 {
             line-height: 120%;
             font-size: 3.4rem;
-            span {
-                color: $cor_principal;
-                font-size: 100%;
-
-            }
+            
         }
 
 

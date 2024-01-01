@@ -3,7 +3,8 @@ $cor_principal: #9300b7;
 $cor_principal_fraca: #9200b74d;
 
 // variaveis de fontes
-$fonte_titulos: 'Montserrat', sans-serif;
+// $fonte_titulos: 'Montserrat', sans-serif;
+$fonte_titulos: 'Raleway', sans-serif;
 $fonte_corpo: 'Raleway', sans-serif;
 
 // variaveis de cores: fontes
@@ -19,10 +20,10 @@ $cor_bg_black_fraca: #272727;
 // variaveis de breakpoints
 $breakpoint_mobile: 650px;
 $breakpoint_tablet: 900px;
-$breakpoint_desktop: 1024px;
+$breakpoint_desktop: 1200px;
 
 // larguras máximas
-$larg_max_components: 1200px;
+$larg_max_components: 1440px;
 
 // variaveis de border radius
 $border_radius_padrao: 10px;

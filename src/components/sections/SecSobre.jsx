@@ -10,8 +10,7 @@ function SecSobre() {
       <div className="container">
         {/* Criar component "Heeader_Secao" */}
         <div className="header-secao">
-          <span>Sobre</span>
-          <h2>Um pouco sobre mim</h2>
+          {/* <h2>UM POUCO <span >SOBRE</span> MIM</h2> */}
         </div>
 
         <div className="div-flex">
@@ -23,12 +22,13 @@ function SecSobre() {
 
           {/* div textos */}
           <div className="div-textos">
-            <div className="cards">
+            {/* <div className="cards">
               <div className="card"></div>
               <div className="card"></div>
               <div className="card"></div>
-            </div>
+            </div> */}
             <div className="texto">
+            <h2>UM POUCO <span >SOBRE</span> MIM</h2>
               <p className="p-fraco">
                 Eu mesmo. Um jovem lindo, cheiroso e charmoso navegando nesse
                 mundo da tecnologia.
@@ -43,8 +43,8 @@ function SecSobre() {
                   Full Stcack
                 </span>
                 . Tendo grande conhecimento em linguagens como HTML, CSS,
-                JavaScript, Além de estar bem familiarizado com principais
-                bibliotecas e frameworks como React, Angular e Vue.js.
+                JavaScript, Além de estar bem familiarizado com algumas das principais
+                bibliotecas e frameworks do mercado, como React e TypeScript.
               </p>
               <a href="#" className="a-button">Ver mais sobre o Jesse</a>
             </div>

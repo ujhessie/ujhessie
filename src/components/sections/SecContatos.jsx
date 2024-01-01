@@ -11,8 +11,12 @@ function SecContatos(){
     return (
         <section id='contatos'>
             <div className="container">
-                <h2>Deseja entrar em <span>contato</span> comigo? Acesse minhas <span>redes sociais.</span></h2>
-                
+                <div>
+                    <h2>PRECISA DE UM SITE?</h2>
+                    <p>Vamos conversar. Entre em contato e tiraremos suas dúvidas.</p>
+                    
+                    
+                </div>
                 {/* card */}
                 <div className="card card-redes-sociais">
                         <div className="div-conteudo-card">

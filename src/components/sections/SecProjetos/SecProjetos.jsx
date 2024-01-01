@@ -1,10 +1,10 @@
 import "./secProjetos.scss";
-import CardProjeto from "../layouts/CardProjeto";
+import CardProjeto from "../../layouts/CardProjeto";
 
 import { BsBoxArrowUpRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-import ProjetosContainer from "../layouts/ProjetosLayout/ProjetosContainer";
+import ProjetosContainer from "../../layouts/ProjetosLayout/ProjetosContainer";
 
 function SecProjetos() {
   function scrollToTop() {

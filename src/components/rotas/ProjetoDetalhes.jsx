@@ -1,10 +1,10 @@
 /* eslint-disable react/jsx-no-target-blank */
-import "./projectDetail.scss";
+import "./projetoDetalhes.scss";
 import { useParams } from "react-router-dom";
-import projects from "./components/projects";
-import SlideCarousel from "./components/layouts/SlideCarousel";
+import projects from "../projects";
+import SlideCarousel from "../layouts/SlideCarousel";
 
-function ProjectDetail() {
+function ProjetoDetalhes() {
   const { projectId } = useParams();
   const project = projects.find((proj) => proj.id === parseInt(projectId));
 
@@ -55,7 +55,7 @@ function ProjectDetail() {
   );
 }
 
-export default ProjectDetail;
+export default ProjetoDetalhes;
 
 {
   /* <h2>{project.name}</h2> */
