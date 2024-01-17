@@ -2,13 +2,69 @@
 @import "../../css/mixins";
 
 .modal {
-    height: 100vh;
-    width: 100vw;
-    left: 0;
-    top: 0;
-    position: fixed;
-    background-color: red;
-    z-index: 1000;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.485);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
 
-    
+  .modal-content {
+    background-color: $cor_bg_black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid $cor_fonte_branca_fraca;
+    overflow: hidden;
+    width: 85%;
+    max-width: $breakpoint_mobile;
+
+    .div_img {
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+
+    .nomeProjeto {
+      text-align: center;
+      font-size: 3rem;
+
+      @include bp_tablet {
+        font-size: 2.5rem;
+      }
+
+      @include bp_mobile {
+        font-size: 2rem;
+      }
+    }
+
+    .div_botoes {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 16px;
+
+      a {
+        @include a_button-2;
+      }
+      .a_button1 {
+        @include a_button-1;
+      }
+      @include bp_mobile {
+        justify-content: center;
+        //   flex-direction: column;
+        margin-bottom: 16px;
+      }
+    }
+
+    .desc {
+        text-align: center;
+    }
+  }
 }

@@ -4,7 +4,15 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 
+import { Link } from "react-router-dom";
+
+import { useProjetos } from "../../../../contexts/ProjetosContext";
+
 const CarrosselProjetos = () => {
+  const { projetos } = useProjetos();
+
+  const ultimosProjetos = projetos.slice().reverse().slice(0, 5);
+
   return (
     <div className="carrosselProjetos">
       <Swiper
@@ -21,41 +29,13 @@ const CarrosselProjetos = () => {
           },
         }}
         grabCursor={true}
-        
-        
         loop={true}
-        
       >
-        <SwiperSlide className="slide">
-          <img
-            src="https://img.freepik.com/fotos-gratis/representacoes-da-experiencia-do-usuario-e-design-de-interface_23-2150104489.jpg?w=900&t=st=1705344868~exp=1705345468~hmac=fb1902760483771920e5648f124d7531d3fd1151e6dba7495ff2dbf82e322999"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide className="slide">
-          <img
-            src="https://img.freepik.com/fotos-gratis/representacoes-da-experiencia-do-usuario-e-design-de-interface_23-2150104489.jpg?w=900&t=st=1705344868~exp=1705345468~hmac=fb1902760483771920e5648f124d7531d3fd1151e6dba7495ff2dbf82e322999"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide className="slide">
-          <img
-            src="https://img.freepik.com/fotos-gratis/representacoes-da-experiencia-do-usuario-e-design-de-interface_23-2150104489.jpg?w=900&t=st=1705344868~exp=1705345468~hmac=fb1902760483771920e5648f124d7531d3fd1151e6dba7495ff2dbf82e322999"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide className="slide">
-          <img
-            src="https://img.freepik.com/fotos-gratis/representacoes-da-experiencia-do-usuario-e-design-de-interface_23-2150104489.jpg?w=900&t=st=1705344868~exp=1705345468~hmac=fb1902760483771920e5648f124d7531d3fd1151e6dba7495ff2dbf82e322999"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide className="slide">
-          <img
-            src="https://img.freepik.com/fotos-gratis/representacoes-da-experiencia-do-usuario-e-design-de-interface_23-2150104489.jpg?w=900&t=st=1705344868~exp=1705345468~hmac=fb1902760483771920e5648f124d7531d3fd1151e6dba7495ff2dbf82e322999"
-            alt=""
-          />
-        </SwiperSlide>
+        {ultimosProjetos.map((projeto) => (
+          <SwiperSlide key={projeto.id} className="slide">
+            <Link to="/allprojects"><img src={projeto.imgs[0]} alt="" /></Link>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );
