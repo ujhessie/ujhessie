@@ -1,0 +1,18 @@
+@import "../../css/variables";
+@import "../../css/mixins";
+
+#footer {
+    
+    background-color: $cor_bg_black_fraca;
+
+    .container {
+        max-width: $breakpoint_desktop;
+        margin:  0 auto;
+        padding: 16px;
+    }
+
+    p.text {
+        text-align: center;
+        
+    }
+}

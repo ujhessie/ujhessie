@@ -1,181 +1,135 @@
-@import 'variables';
-
+@import "variables";
+@import "mixins";
 
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 80px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 main {
-    position: relative;
-    max-width: $larg_max_components;
-    margin: 0 auto;
+  position: relative;
+  max-width: $larg_max_components;
+  margin: 0 auto;
 }
 
 body {
-    background-color: $cor_bg_black;
-    position: relative;
+  background-color: $cor_bg_black;
+  position: relative;
 }
 
 * {
-    padding: 0;
-    border: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-    font-family: $fonte_corpo;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: $fonte_corpo;
+  z-index: 100;
+  transition: 200ms ease-in-out;
+  z-index: 0;
 
-    // estilizando as barra de rolagem
-    &::-webkit-scrollbar {
-        width: 2px; 
-    }
-    &::-webkit-scrollbar-track {
-        background: $cor_bg_black;        /* color of the tracking area */
-    }
-    &::-webkit-scrollbar-thumb {
-        background-color: $cor_fonte_branca;    /* color of the scroll thumb */
-        border-radius: 10px;       /* roundness of the scroll thumb */
-        border: none;  /* creates padding around scroll thumb */
-    }
+  // estilizando as barra de rolagem
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+  &::-webkit-scrollbar-track {
+    background: $cor_bg_black; /* color of the tracking area */
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $cor_fonte_branca; /* color of the scroll thumb */
+    border-radius: 10px; /* roundness of the scroll thumb */
+    border: none; /* creates padding around scroll thumb */
+  }
 
-    h1, h2, h3, h4 {
-        font-family: $fonte_titulos;
-        font-weight: 700;
-        
-        span {
-            color: $cor_fonte_branca;
-            font-size: 100%;
-            background-color: $cor_principal;
-            padding: 4px;
-            
-        }
-        a {
-            font-size: 100%;
-            color: $cor_fonte_branca;
-        }
-    }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: $fonte_titulos;
+    font-weight: 700;
 
-    h1 {
-        font-size: 6.4rem;
-        line-height: 100%;
-        text-transform: uppercase;
-
-    }
-
-    h2 {
-        font-size: 3.4rem;
-        line-height: 112%;
-        color: $cor_fonte_branca;
-        margin-bottom: 20px;
-        
-    }
-
-    h3 {
-        font-size: 2.4rem;
-        margin-top: 1.2rem;
-    }
-
-    p {
-        font-size: 1.6rem;
-        margin: 14px 0 22px;
-        line-height: 135%;
-        font-weight: 500;
-
-        span, a {
-            
-            cursor: pointer;
-            color: $cor_principal;
-            font-weight: 600;
-        }
-        a {
-            text-decoration: underline;
-        }
-    }
-    
-
-    a,
     span {
-        font-size: 1.8rem;
+      color: $cor_fonte_branca;
+      font-size: 100%;
+      background-color: $cor_principal;
+      padding: 4px;
+      border-radius: 4px;
+    }
+    a {
+      font-size: 100%;
+      color: $cor_fonte_branca;
+    }
+  }
+
+  h1 {
+    font-size: 6.4rem;
+    line-height: 100%;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    color: $cor_fonte_branca;
+    @include bp_tablet {
+      font-size: 4.4rem;
+    }
+    @include bp_mobile() {
+      text-align: center;
+      font-size: 3.5rem;
+    }
+  }
+
+  h2 {
+    font-size: 3.4rem;
+    line-height: 120%;
+    color: $cor_fonte_branca;
+    margin-bottom: 16px;
+
+    @include bp_tablet {
+      font-size: 3rem;
+      line-height: 160%;
     }
 
-    @media (max-width: $breakpoint_tablet) {
-        h1, h2, h3 {
-            text-align: center;
-        }
-        h1 {
-            font-size: 4.8rem;
-            line-height: 110%;
-        }
-
-        h2 {
-            line-height: 120%;
-            font-size: 3.4rem;
-            
-        }
-
-
-        p { 
-            line-height: 175%;
-        }
+    @include bp_mobile {
+      font-size: 2.5rem;
+      
     }
+  }
 
-    @media (max-width: $breakpoint_mobile) {
-        h1 {
-            font-size: 4rem;
-        }
-        h2 {
-            font-size: 2.2rem;
-        }
-        h3 {
-            font-size: 2rem;
-        }
+  h3 {
+    font-size: 2.4rem;
+    margin-top: 1.2rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    line-height: 130%;
+
+    @include bp_mobile {
+      font-size: 1.4rem;
     }
+  }
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 section {
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
+  padding: 0 10px;
+  width: 100%;
 
-.container {
-    max-width: $larg_max_components;
-    padding: 35px;
-    width: 100%;
-    overflow: hidden;
-    border-radius: $border_radius_padrao;
-    // background-color: $cor_bg_black_fraca;  
-
-    @media (max-width: $breakpoint_tablet) {
-        padding: 30px;
-    }
-
-    @media (max-width: $breakpoint_mobile) {
-        padding:20px;
-    }
+  .container {
+    max-width: $breakpoint_desktop;
+    margin: 0 auto;
+  }
 }
 
 
-.desativado {
-    display: none;
-}
+.text {
+  color: $cor_fonte_branca_fraca;
+  font-weight: 600;
+  opacity: 0.8;
 
-.ativo {
-    display: block;
-}
-
-
-.img-conteudo {
-    display: block;
-    width: 100%;
-    height: 100%;
-    margin: 0 0 10px 0;
-    aspect-ratio: auto;
+  a {
+    text-decoration: underline;
+  }
 }

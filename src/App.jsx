@@ -1,32 +1,23 @@
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
-import PageInicio from "./components/rotas/RotaInicio";
-import PageTodosProjetos from "./components/rotas/RotaProjetos";
-import ProjetoDetalhes from './components/rotas/ProjetoDetalhes';
-import Header from "./components/layouts/Header";
-import Footer from "./components/layouts/Footer";
-import SecContatos from './components/sections/SecContatos';
-import ButtonScroll from "./components/ButtonScroll/ButtonScroll";
-import ButtonBack from './components/buttonsNavigation/ButtonBack';
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
+
+import AboutPage from "./pages/AboutPage/AboutPage";
+import HomePage from "./pages/HomePage/HomePage";
+import AllProjetctsPage from "./pages/AllProjectsPage/AllProjetctsPage";
+
+import { ProjetosProvider } from "./contexts/ProjetosContext";
 
 function App() {
   return (
-    <Router>
-      <Header />
-
-      <main>
-        <ButtonScroll />
-        <ButtonBack/>
+    <ProjetosProvider>
+      <Router>
         <Routes>
-          <Route path="/" element={<PageInicio />} />
-          <Route path="/todosprojetos" element={<PageTodosProjetos />} />
-          <Route path="/projeto/:projectId" element={<ProjetoDetalhes />} />
-          <Route path="*" element={<PageInicio />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/allprojects" element={<AllProjetctsPage />} />
+          <Route path="*" element={<HomePage />} />
         </Routes>
-      </main>
-
-      <SecContatos />
-      <Footer />
-    </Router>
+      </Router>
+    </ProjetosProvider>
   );
 }
 

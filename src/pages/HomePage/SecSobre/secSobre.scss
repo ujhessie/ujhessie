@@ -1,0 +1,98 @@
+@import "../../../css/variables";
+@import "../../../css/mixins";
+
+#sobre {
+  padding-top: 50px;
+  .container {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    gap: 8px;
+
+    @include bp_mobile {
+      grid-template-columns: 1fr;
+    }
+
+    .div_img {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      aspect-ratio: auto;
+      position: relative;
+      // margin-bottom: 8px;
+      border-radius: 8px;
+
+      @include bp_mobile {
+        aspect-ratio: 21/9;
+        width: 100%;
+        margin-bottom: 8px;
+        
+        // display: none;
+      }
+
+      img {
+        position: absolute;
+        object-fit: cover;
+        display: block;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        aspect-ratio: auto;
+
+        &:hover {
+          scale: 1.2;
+        }
+      }
+    }
+
+    .div_info {
+      @include bp_mobile {
+        text-align: center;
+      }
+      .marcadores {
+        display: flex;
+        gap: 4px;
+        flex-wrap: wrap;
+        margin-bottom: 16px;
+        @include bp_mobile {
+          justify-content: center;
+        }
+
+        li {
+          border: 1px solid $cor_fonte_branca_fraca;
+          color: $cor_fonte_branca_fraca;
+          padding: 4px 8px;
+          border-radius: 4px;
+          font-weight: 600;
+        }
+      }
+      p {
+        font-weight: 600;
+        color: $cor_fonte_branca_fraca;
+        margin-bottom: 16px;
+      }
+
+      .p_fraco {
+        opacity: 0.8;
+        margin-bottom: 4px;
+        // font-size: 1.2rem;
+      }
+
+      .div_botoes {
+        display: flex;
+        gap: 8px;
+        
+        a {
+          @include a_button-2;
+        }
+        .a_button1 {
+          @include a_button-1;
+        }
+        @include bp_mobile {
+          justify-content: center;
+          //   flex-direction: column;
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@import "../../css/variables";
+@import "../../css/mixins.scss";
+
+.div_icons__redes_sociais {
+  display: flex;
+  gap: 4px;
+  // margin-bottom: 16px;
+
+  @include bp_mobile {
+    justify-content: center;
+  }
+
+  a {
+    padding: 4px;
+    opacity: 0.8;
+    color: $cor_fonte_branca;
+    transition: 500ms ease-in-out;
+    background-color: $cor_principal_fraca;
+    margin: 0;
+    aspect-ratio: 1/1;
+    width: 50px;
+    position: relative;
+    border-radius: 4px;
+
+    .icon {
+      font-size: 3.5rem;
+      transition: 200ms ease-in-out;
+      color: $cor_fonte_branca;
+      opacity: 0.8;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:hover {
+      opacity: 1;
+
+      .icon {
+        color: $cor_principal;
+      }
+    }
+  }
+
+  @include bp_tablet {
+    a {
+        width: 50px;
+
+        .icon {
+            font-size: 3.6rem;
+        }
+    }
+  }
+
+  
+  @include bp_mobile {
+    a {
+        width: 50px;
+
+        .icon {
+            font-size: 3.2rem;
+        }
+    }
+  }
+}

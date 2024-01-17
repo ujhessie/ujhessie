@@ -1,0 +1,69 @@
+@import "../../../css/variables";
+@import "../../../css/mixins";
+
+#projetos {
+
+    .container {
+        
+.div_botoes {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    a {
+      @include a_button-2;
+   
+    }
+    .a_button1 {
+      @include a_button-1;
+      
+    }
+    @include bp_mobile {
+      justify-content: center;
+    //   flex-direction: column;
+    }
+  }
+    }
+}
+
+// Componentes a separar
+// TODO: Separar estes componentes
+.header_section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 16px;
+  @include bp_mobile {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .tags {
+    align-items: start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    @include bp_mobile {
+        
+    }
+  }
+
+  .tag {
+    display: block;
+    margin: 0;
+    font-weight: 600;
+    color: $cor_fonte_branca_fraca;
+    padding: 8px;
+    border: 2px solid $cor_fonte_branca_fraca;
+    border-radius: 8px;
+    opacity: 1;
+    font-size: 1.2rem;
+
+    &:hover {
+      opacity: 1;
+      background-color: $cor_fonte_branca_fraca;
+      color: $cor_bg_black;
+    }
+  }
+}
