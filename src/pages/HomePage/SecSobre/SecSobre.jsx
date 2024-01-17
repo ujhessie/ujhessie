@@ -5,7 +5,7 @@ const SecSobre = () => {
         <section id="sobre">
             <div className="container">
                 <div className="div_img">
-                    <img src="/imgs/me2.png" alt="" />
+                    <img src="imgs/me2.png" alt="" />
                 </div>
                 <div className="div_info">
                     <h2>Um pouquinho <span>sobre</span> o Jesse</h2>
