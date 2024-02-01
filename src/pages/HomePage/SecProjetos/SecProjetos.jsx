@@ -11,7 +11,7 @@ const SecProjetos = () => {
         <h2>
           Alguns dos meus <span>projetos</span> em destaque
         </h2>
-        <div className="tags">
+        {/* <div className="tags">
           <a href="" className="tag ">
             Tem tag
           </a>
@@ -30,7 +30,7 @@ const SecProjetos = () => {
           <a href="" className="tag">
             Tem tag
           </a>
-        </div>
+        </div> */}
       </div>
     );
   };
@@ -42,7 +42,7 @@ const SecProjetos = () => {
 
         <CarrosselProjetos />
         <div className="div_botoes">
-          <Link to="/allprojects" className="a_button1">
+          <Link to="/projetos" className="a_button1">
             Ver mais projetos
           </Link>
           <a href="" className="a_button2">

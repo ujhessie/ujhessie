@@ -30,8 +30,9 @@
 // TODO: Separar estes componentes
 .header_section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   margin-bottom: 16px;
+  text-align: center;
   @include bp_mobile {
     grid-template-columns: 1fr;
 

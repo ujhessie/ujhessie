@@ -1,21 +1,22 @@
 import { createContext, useState, useContext } from "react";
 
 const projetosIniciais  = [
-  {
-    id: 1,
-    name: "Meu portfólio",
-    desc: "Um portfólio minimalista feito com React Js",
-    data: "05/23",
-    recursos: ["React JS", "Vite", "Sass"],
-    categoria: "catSites catFrontEnd",
-    linkVisitar: "https://ujhessie.github.io/ujhessie/",
-    linkDeploy: "https://github.com/ujhessie/ujhessie",
-    imgs: [
-      "./imgs/projetos/portfolio/1.png",
-      "./imgs/projetos/portfolio/2.png",
-      "./imgs/projetos/portfolio/3.png",
-    ],
-  },
+    {
+      id: 1,
+      name: "Meu portfólio",
+      desc: "Um portfólio minimalista feito com React Js",
+      data: "05/23",
+      recursos: ["React JS", "Vite", "Sass"],
+      categoria: "catSites catFrontEnd",
+      linkVisitar: "https://ujhessie.github.io/ujhessie/",
+      linkDeploy: "https://github.com/ujhessie/ujhessie",
+      imgBanner:"/imgs/Banner teste.png",
+      imgs: [
+        "./imgs/projetos/portfolio/1.png",
+        "./imgs/projetos/portfolio/2.png",
+        "./imgs/projetos/portfolio/3.png",
+      ],
+    },
   {
     id: 2,
     name: "Sistema lanchonete | Em desenvolvimento",

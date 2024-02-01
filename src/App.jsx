@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import AllProjetctsPage from "./pages/AllProjectsPage/AllProjetctsPage";
 
 import { ProjetosProvider } from "./contexts/ProjetosContext";
+import { DetalhesProjetos } from "./pages/DetalhesProjetos.jsx/DetalhesProjetos";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/allprojects" element={<AllProjetctsPage />} />
+          <Route path="/projetos/:id" element={<DetalhesProjetos/>} />
+          <Route path="/projetos" element={<AllProjetctsPage />} />
           <Route path="*" element={<HomePage />} />
         </Routes>
       </Router>

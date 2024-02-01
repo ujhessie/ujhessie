@@ -33,7 +33,7 @@ const CarrosselProjetos = () => {
       >
         {ultimosProjetos.map((projeto) => (
           <SwiperSlide key={projeto.id} className="slide">
-            <Link to="/allprojects"><img src={projeto.imgs[0]} alt="" /></Link>
+            <Link to="/projetos"><img src={projeto.imgs[0]} alt="" /></Link>
           </SwiperSlide>
         ))}
       </Swiper>
