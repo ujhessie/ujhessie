@@ -1,10 +1,13 @@
 import "./secProjetos.scss";
-
-import CarrosselProjetos from "./CarrosselProjetos/CarrosselProjetos";
-
 import { Link } from "react-router-dom";
+import CardProjeto from "../../../components/CardProjeto/CardProjeto";
+import { useProjetos } from "../../../contexts/ProjetosContext";
 
 const SecProjetos = () => {
+
+  const { projetos } = useProjetos();
+  const ultimosProjetos = projetos.slice().reverse().slice(0,3)
+
   const HeaderSection = () => {
     return (
       <div className="header_section">
@@ -40,7 +43,11 @@ const SecProjetos = () => {
       <div className="container">
         <HeaderSection />
 
-        <CarrosselProjetos />
+        <div className="cardsProjetos">
+          {ultimosProjetos.map((projeto) => (
+            <CardProjeto key={projeto.id} id={projeto.id} />
+          ))}
+        </div>
         <div className="div_botoes">
           <Link to="/projetos" className="a_button1">
             Ver mais projetos

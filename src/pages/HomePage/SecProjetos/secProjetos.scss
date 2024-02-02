@@ -2,28 +2,31 @@
 @import "../../../css/mixins";
 
 #projetos {
-
-    .container {
-        
-.div_botoes {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 16px;
-    a {
-      @include a_button-2;
-   
-    }
-    .a_button1 {
-      @include a_button-1;
-      
-    }
-    @include bp_mobile {
+  .container {
+    .div_botoes {
+      display: flex;
       justify-content: center;
-    //   flex-direction: column;
+      gap: 8px;
+      margin-bottom: 16px;
+      a {
+        @include a_button-2;
+      }
+      .a_button1 {
+        @include a_button-1;
+      }
+      @include bp_mobile {
+        justify-content: center;
+        //   flex-direction: column;
+      }
+    }
+
+    .cardsProjetos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 16px;
     }
   }
-    }
 }
 
 // Componentes a separar
@@ -46,7 +49,6 @@
     gap: 8px;
 
     @include bp_mobile {
-        
     }
   }
 

@@ -10,7 +10,7 @@ const projetosIniciais  = [
       categoria: "catSites catFrontEnd",
       linkVisitar: "https://ujhessie.github.io/ujhessie/",
       linkDeploy: "https://github.com/ujhessie/ujhessie",
-      imgBanner:"/imgs/Banner teste.png",
+      
       imgs: [
         "./imgs/projetos/portfolio/1.png",
         "./imgs/projetos/portfolio/2.png",
@@ -103,6 +103,26 @@ const projetosIniciais  = [
       "./imgs/projetos/sistemaDelivery/2.png",
       "./imgs/projetos/sistemaDelivery/3.png",
       "./imgs/projetos/sistemaDelivery/4.png",
+    ],
+  },
+  {
+    id: 8,
+    name: "SOCIAL MEDIA | LAVA JATO",
+    desc: "Explore a vibe relaxante desse projeto de mídia social! Com seis posts minimalistas no Instagram, a gente te leva numa jornada visual tranquila. Os tons azuis claros criam uma atmosfera de boa vibe, transmitindo simplicidade e estilo em cada publicação.",
+    data: "11/23",
+    recursos: ["Photoshop", "Illustrator",],
+    categoria: "Socialmedia",
+    linkVisitar: "https://www.behance.net/gallery/190527935/SOCIAL-MEDIA-LAVA-JATO",
+    linkDeploy: "https://www.behance.net/gallery/190527935/SOCIAL-MEDIA-LAVA-JATO",
+    imgBanner:"./imgs/projetos/jrLavaJato/banner.png",
+    imgs: [
+      "./imgs/projetos/jrLavaJato/capa.png",
+      "./imgs/projetos/jrLavaJato/1.png",
+      "./imgs/projetos/jrLavaJato/2.png",
+      "./imgs/projetos/jrLavaJato/3.png",
+      "./imgs/projetos/jrLavaJato/4.png",
+      "./imgs/projetos/jrLavaJato/5.png",
+      "./imgs/projetos/jrLavaJato/6.png",
     ],
   },
 ];
