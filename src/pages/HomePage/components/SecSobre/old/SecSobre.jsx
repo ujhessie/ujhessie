@@ -1,6 +1,6 @@
 import "./secSobre.scss"
 
-const SecSobre = () => {
+export const SecSobre = () => {
     return (
         <section id="sobre">
             <div className="container">
@@ -28,4 +28,3 @@ const SecSobre = () => {
     )
 }
 
-export default SecSobre

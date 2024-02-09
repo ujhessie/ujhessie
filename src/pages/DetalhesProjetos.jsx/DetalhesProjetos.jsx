@@ -2,9 +2,17 @@ import "./detalhesProjetos.scss";
 
 import { useParams } from "react-router-dom";
 import { useProjetos } from "../../contexts/ProjetosContext";
-
+import { GoLinkExternal } from "react-icons/go";
 import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
+import { IoDocumentTextOutline } from "react-icons/io5";
+
+import { RedesSociais } from "../../components/RedesSociais/RedesSociais";
+import {
+  ContentSecao,
+  SecaoContainer,
+} from "../../components/SecaoContainer/SecaoContainer";
+import { Slides } from "./components/Slides";
+import { ButtonLink } from "../../components/ButtonLink/ButtonLink";
 
 export const DetalhesProjetos = () => {
   const { id } = useParams();
@@ -17,54 +25,36 @@ export const DetalhesProjetos = () => {
   }
 
   return (
-    <div id="divDetalhesProjetos">
+    <div className="detalhesProjetos">
       <Header />
-      <main>
-      {projeto.imgBanner && (
-        <div>
-          {/* Sua estrutura aqui */}
-          <div className="divBanner"><img src={projeto.imgBanner} alt="Banner do Projeto" /></div>
-        </div>
-      )}
-
-        <div className="divInfos">
-          <img src="/imgs/Banner teste.png" alt="" className="imgBackground" />
-          <div className="divBlur"></div>
-          <div className="contentInfo">
-            <h2>Sobre o projeto:</h2>
-            <p className="desc">{projeto.desc}</p>
-            <hr />
-            <h3>Tecnologias, habilidades e ferramentas</h3>
-            <ul className="tecnologias">
-              <li>React js</li>
-              <li>React js</li>
-              <li>React js</li>
-              <li>React js</li>
-            </ul>
-            <hr />
-            <h3>Visite este projeto</h3>
-            <div className="div_botoes">
-              <a href={projeto.linkVisitar} className="a_button1">
-                Visitar projeto
-              </a>
-              <a href={projeto.linkDeploy} className="a_button2">
-                Ver um pouco mais
-              </a>
+      <SecaoContainer className="divContainer inicio">
+        <ContentSecao>
+          <main>
+            <div className="divSlides">
+              {/* <Slides imgs={projeto.imgs} /> */}
+              <Slides imgs={projeto.imgs} />
             </div>
-          </div>
-          
-        </div>
-
-        <div className="divImagens">
-          {projeto.imgs && projeto.imgs.map((img, index) => (
-        <div key={index} className="divImagem">
-          <img src={img} alt={`Imagem do Projeto ${index + 1}`} />
-        </div>
-      ))}
-          </div>
-      </main>
-
-      <Footer />
+            <div className="divInfo">
+              <h2>{projeto.name}</h2>
+              <ul className="recursos">
+                {projeto.recursos.map((element, index) => {
+                  return <li>{element}</li>;
+                })}
+              </ul>
+              <p className="desc">{projeto.desc}</p>
+              <div className="divBotoes">
+                <ButtonLink tipo={2} rota={projeto.linkVisitar} icon={<GoLinkExternal />}>
+                  Visitar Projeto
+                </ButtonLink>
+                <ButtonLink rota={projeto.linkDeploy} icon={<IoDocumentTextOutline />} tipo={3}>
+                  Ver mais detalhes
+                </ButtonLink>
+              </div>
+            </div>
+          </main>
+        </ContentSecao>
+      </SecaoContainer>
+      <RedesSociais />
     </div>
   );
 };

@@ -1,66 +1,52 @@
 import { Link } from "react-router-dom";
-import './header.scss'
-import { IoIosClose } from "react-icons/io";
-import { IoMdMenu } from "react-icons/io";
-import img from '/imgs/logo.png'
-
-
-function menuHamburguerAtivar() {
-    const navPrincipal = document.querySelector('#navPrincipal')    
-    const btnMenuAtivar = document.querySelector('#button-open-menu')
-    const btnMenuFechar = document.querySelector('#button-close-menu')
-
-    btnMenuAtivar.classList.add('hidden')
-    btnMenuFechar.classList.remove('hidden')
-    navPrincipal.classList.add('nav-ativa')
-}
-
-function menuHamburguerFechar(sec) {
-    const navPrincipal = document.querySelector('#navPrincipal')
-    const btnMenuAtivar = document.querySelector('#button-open-menu')
-    const btnMenuFechar = document.querySelector('#button-close-menu')
-
-    btnMenuAtivar.classList.remove('hidden')
-    btnMenuFechar.classList.add('hidden')
-    navPrincipal.classList.remove('nav-ativa')
-
-
-    setTimeout(() => {
-        const secao = sec
-        const targetElement = document.getElementById( secao );
-        const offsetTop = targetElement.offsetTop - 80;
-        window.scrollTo({ top: offsetTop, behavior: "smooth" });
-    }, 100)
-
-
-}
-
-
+import "./header.scss";
+import { ButtonLink } from "../ButtonLink/ButtonLink";
+import { useState } from "react";
+import { IoClose } from "react-icons/io5";
+import { CgMenuRight } from "react-icons/cg";;
 
 function Header() {
-    return(
-        <header id="header">           
-                <div className="content_header">
-                    <Link className="logo" to='/'><img  src={img} alt="" /></Link>
-                    <nav className='' id='navPrincipal'>
-                        <ul>
-                            <li><Link className="item-nav" to='/ujhessie' onClick={() => menuHamburguerFechar('secInicio')}>Início</Link></li>
-                            <li><Link className="item-nav" to='/about' onClick={() => menuHamburguerFechar('secSobre')}>Sobre</Link></li>
-                            {/* <li><Link className="item-nav" to='/ujhessie' onClick={() => menuHamburguerFechar('secProjetos')}>Projetos</Link></li> */}
-                            <li><Link className="item-nav" to='/services' onClick={() => menuHamburguerFechar('contatos')}>Serviços</Link></li>
-                            <li><Link className="item-nav todos-projetos" to='/todosprojetos' onClick={() => menuHamburguerFechar('header')}>Mais Projetos</Link></li>
-                        </ul>
+  const [togleMenu, setTogleMenu] = useState("");
 
-                        <Link  className="button-contato-header item-nav" onClick={() => menuHamburguerFechar('contatos')}>Contato</Link>
-
-                        <div className="div-menu-h">
-                            <IoMdMenu className="icon-menu" id="button-open-menu" onClick={ menuHamburguerAtivar } />
-                            <IoIosClose className="icon-menu hidden" id="button-close-menu" onClick={ menuHamburguerFechar } />
-                        </div>
-                    </nav>
-                </div>
-        </header>
-    )
+  return (
+    <header id="header">
+      <div className="contentHeader">
+        <div className="div1">
+          <Link className="logo" to="/">
+            UJHESSIE
+          </Link>
+          <nav className={`navHeader ${togleMenu}`}>
+            <Link className="itemNavHeader">Inicio</Link>
+            <Link className="itemNavHeader">Serviços</Link>
+            <Link className="itemNavHeader">Projetos</Link>
+            <Link className="itemNavHeader">Sobre</Link>
+          </nav>
+        </div>
+        <div className="divBotoes">
+          <ButtonLink className="botaoContato" tipo="2">CONTATO</ButtonLink>
+          {togleMenu === "" && (
+            <button 
+              onClick={() => {
+                setTogleMenu("menuAtivo");
+              }}
+            >
+              <CgMenuRight className="icon" />
+            </button>
+          )}
+          {togleMenu === "menuAtivo" && (
+            <button
+            
+              onClick={() => {
+                setTogleMenu("");
+              }}
+            >
+              <IoClose className="icon" />
+            </button>
+          )}
+        </div>
+      </div>
+    </header>
+  );
 }
 
-export default Header
+export default Header;

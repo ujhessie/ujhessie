@@ -1,19 +1,26 @@
 import "./secInicio.scss";
 
-import RedesSociais from "../../../components/RedesSociais/RedesSociais";
+import RedesSociais from "../../../../components/RedesSociais/RedesSociais";
 
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
+import { ButtonLink } from "../../../../components/ButtonLink/ButtonLink";
 
-const SecInicio = () => {
+export const SecInicio = () => {
   const Botoes = () => {
     return (
-      <div className="div_buttons">
-        <a href="" className="a_button1">
-          Projetos
-        </a>
-        <a href="" className="a_button2">
-          Ver Mais
-        </a>
+      <div className="botoes">
+        <ButtonLink
+          nomeExibido="Ver projetos"
+          tamanho="grande"
+          rota="/projetos"
+          tipo={1}
+        />
+        <ButtonLink
+          nomeExibido="Ver mais"
+          tamanho="normal"
+          tipo={2}
+          rota="/projetos"
+        />
       </div>
     );
   };
@@ -27,11 +34,10 @@ const SecInicio = () => {
           </div>
           <h1>Eu sou o Jesse Rodrigues</h1>
           <p className="profissoes">Dev Web | Designer</p>
-         
+
           <Botoes />
           <hr className="hr_inicio" />
           <RedesSociais className="div_redes_sociais" />
-          
         </div>
         <div className="div_img">
           <img src="imgs/me.jpg" alt="" />
@@ -39,11 +45,9 @@ const SecInicio = () => {
         </div>
       </div>
       <a href="#" className="rolar_para_baixo">
-            <MdOutlineKeyboardDoubleArrowDown className="icon" />
-            Rolar para ver mais
-          </a>
+        <MdOutlineKeyboardDoubleArrowDown className="icon" />
+        Rolar para ver mais
+      </a>
     </section>
   );
 };
-
-export default SecInicio;

@@ -1,32 +1,55 @@
-/* eslint-disable react/jsx-no-target-blank */
+import { SecaoContainer, ContentSecao } from "../SecaoContainer/SecaoContainer";
+import { FaGithub } from "react-icons/fa";
+import { RiInstagramFill } from "react-icons/ri";
+import { FaLinkedin } from "react-icons/fa6";
+import { IoLogoWhatsapp } from "react-icons/io";
+
 import "./redesSociais.scss";
 
-import { PiGithubLogoFill } from "react-icons/pi";
-import { FaBehance } from "react-icons/fa";
-import { PiInstagramLogoFill } from "react-icons/pi";
-import { FaTelegramPlane } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+export const RedesSociais = () => {
+  const RedeSocial = ({ link, children = "Rede social", icon }) => {
+    return (
+      <a href={link} target="_blank" className="redeSocial">
+        <div className="divIcon">{icon}</div>
+        <p>{children}</p>
+      </a>
+    );
+  };
 
-const RedesSociais = () => {
   return (
-    <div className="div_icons__redes_sociais">
-      <a href="https://github.com/ujhessie" target="_blank" className="item">
-        <PiGithubLogoFill  className="icon" />
-      </a>
-      <a href="https://www.behance.net/juniorrodrigues42" className="item">
-        <FaBehance  className="icon" />
-      </a>
-      <a href="https://www.instagram.com/ujhessie_/" target="_blank"  className="item">
-        <PiInstagramLogoFill  className="icon" />
-      </a>
-      <a href="https://t.me/ujhessie" target="_blank"  className="item">
-        <FaTelegramPlane  className="icon" />
-      </a>
-      <a href="mailto:ujhess4502@gmail.com&body=T este+de+mensagem" target="_blank"  className="item">
-        <MdEmail  className="icon" />
-      </a>
-    </div>
+    <SecaoContainer id=".secRedesSociais">
+      <ContentSecao>
+      <div className="conteudo" id="redesSociais">
+        <h2>Você tem interesse em trabalhar comigo?</h2>
+        <div className="divRedesSociais">
+          <RedeSocial link={"https://github.com/ujhessie"} icon={<FaGithub />}>
+            GitHub
+          </RedeSocial>
+          <RedeSocial
+            link={"https://www.instagram.com/ujhessie_/"}
+            icon={<RiInstagramFill />}
+          >
+            Instagram
+          </RedeSocial>
+          <RedeSocial
+            link={"https://www.linkedin.com/in/jesserodrigues4502/"}
+            icon={<FaLinkedin />}
+          >
+            LinkedIn
+          </RedeSocial>
+          <RedeSocial
+            link={"https://wa.me/+5598988740103"}
+            icon={<IoLogoWhatsapp />}
+          >
+            WhatsApp
+          </RedeSocial>
+        </div>
+        <p>
+          Entre em contato comigo através das minhas redes sociais ou envie-me
+          um email através de <a href="#">juniorrodrigues4502@gmail.com.</a>
+        </p>
+      </div>
+      </ContentSecao>
+    </SecaoContainer>
   );
 };
-
-export default RedesSociais;

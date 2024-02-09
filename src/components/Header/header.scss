@@ -3,170 +3,128 @@
 @import "../../css/mixins.scss";
 
 /* Estilo para header */
-header {
-  background-color: $cor_bg_black;
-  padding: 10px;
-  max-width: $breakpoint_desktop;
-  z-index: 1000;
+#header {
+  background-color: $cor_pretoFosco;
+
   display: flex;
   align-items: center;
   gap: 16px;
   width: 100%;
   position: relative;
-  height: 70px;
-  z-index: 0;
+  height: 80px;
+  z-index: 1000;
+  padding: 0 120px;
 
-  // height: 70px;
-  margin: 0 auto;
-
-  * {
-    z-index: 1000;
+  @include bp_tablet {
+    padding: 10px 80px;
   }
 
-  .content_header {
+  @include bp_mobile {
+    padding: 10px 30px;
+  }
+
+  .contentHeader {
     margin: 0 auto;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
+    // position: relative;
+    max-width: $breakpoint_desktop;
+    height: auto;
 
-    /* Estilo para itens de navegação */
-    .item-nav {
-      @include fonte_corpo($cor_fonte_branca);
-      font-weight: bold;
-      padding: 10px;
-      border-radius: 4px;
-      transition: 300ms;
-      font-size: 1.4rem;
+    .logo {
+      font-weight: 600;
+      color: $cor_brancoClaro;
+      font-size: 3.2rem;
 
-      &:hover {
-        opacity: 1;
-        background-color: $cor_fonte_branca;
-        color: $cor_fonte_preta;
+      @include bp_mobile {
+        font-size: 2.4rem;
       }
     }
 
-    nav {
+    div {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 64px;
+    }
 
-      ul {
-        display: flex;
-        align-items: center;
+    .navHeader {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      @include bp_tablet {
+        display: none;
         position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
+        top: 80px;
+        left: 0;
+        flex-direction: column;
+        background-color: $cor_pretoSecundario;
+        z-index: 1;
+        height: 100vh;
+        width: 100vw;
+        padding: 32px;
+        justify-content: left;
+
+        &.menuAtivo {
+          display: flex;
+        }
       }
 
-      /* Menu HAMBURGUER */
-      .div-menu-h {
-        display: none;
-        padding: 10px;
-        background-color: $cor_fonte_branca;
-        border-radius: 4px;
-        position: relative;
-        width: 45px;
-        aspect-ratio: 1/1;
-        justify-content: center;
-        align-items: center;
+      .itemNavHeader {
+        display: inline-block;
+        color: $cor_fonte_branca;
+        font-size: 1.6rem;
+        font-weight: 400;
+        transition: 400ms;
+        background-color: $cor_pretoSecundario;
+        z-index: 1000;
 
-        #button-open-menu {
-          scale: 4;
+        &:hover {
+          text-decoration: underline;
         }
-        #button-close-menu {
-          scale: 6;
-        }
+      }
+    }
 
-        .hidden {
+    .divBotoes {
+      gap: 16px;
+      align-items: center;
+
+      a {
+        padding: 16px 24px;
+        @include bp_mobile {
           display: none;
         }
       }
-    }
 
-    /* Botão de contato no cabeçalho */
-    .button-contato-header {
-      @include a_button-1;
-    }
+      // button {
+      //   padding: 16px ;
+      //   width: 44px;
+      //   aspect-ratio: 1/1;
+      //   // background-color: $cor_brancoClaro;
+      //   position: relative;
+        
+      //   .icon {
+      //     position: absolute;
+      //     left: 50%;
+      //     top: 50%;
+      //     transform: translate(-50%, -50%);
+      //     font-size: 1.6rem;
+      //   }
+      // }
 
-    /* Estilo responsivo para tablet */
-    @include bp_tablet {
-      /* nav ativa */
-      .nav-ativa {
-        ul {
-          display: flex;
-        }
-      }
-
-      nav {
-        .div-menu-h {
-          display: flex;
-        }
-      }
-
-      nav ul {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        transform: translateX(0);
+      button {
+        
+        background-color: transparent;
+        color: $cor_brancoClaro;
+        font-size: 4rem;
         display: none;
-        gap: 4px;
-        flex-direction: column;
-        background-color: $cor_bg_black;
-        padding: 10px ;
-        width: 100%;
-        height: calc(100vh - 70px);
-        border-radius: 10px;
-        overflow: hidden;
-
-        li {
-          width: 100%;
-
-          &:first-child {
-            border-radius: 4px 4px 0 0;
-            overflow: hidden;
-          }
-          &:last-child {
-            border-radius: 0 0 4px 4px;
-            overflow: hidden;
-          }
-
-          .item-nav {
-            border-radius: 0;
-            display: inline-block;
-            width: 100%;
-            padding: 20px;
-            text-align: center;
-            background-color: $cor_bg_black_fraca;
-          }
+        align-items: center;
+        justify-content: center;
+        @include bp_tablet {
+          display: flex;
         }
       }
     }
-  }
-}
-
-/* Estilo para .logo */
-.logo {
-  width: 150px;
-  opacity: 0.8;
-  transition: 200ms;
-  display: flex;
-  align-items: center;
-
-  img {
-    width: 100%;
-    margin: 0;
-    transform: translateX(-25px);
-    padding: 0;
-    background-color: transparent;
-    display: block;
-    overflow: visible;
-  }
-
-  &:hover {
-    background-color: transparent;
-    opacity: 1;
-    scale: 1.01;
   }
 }

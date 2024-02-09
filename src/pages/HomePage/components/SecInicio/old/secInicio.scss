@@ -1,8 +1,7 @@
-@import "../../../css/variables";
-@import "../../../css/mixins";
+@import "../../../../css/variables";
+@import "../../../../css/mixins";
 
 #inicio {
-  
   .container {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -48,28 +47,21 @@
         color: $cor_fonte_branca;
         margin-bottom: 16px;
       }
-      .div_buttons {
+      .botoes {
         display: flex;
         gap: 8px;
-        
-        a {
-          @include a_button-2;
-        }
-        .a_button1 {
-          @include a_button-1;
-        }
-        @include bp_mobile {
+        justify-content: left;
+        @include bp_mobile{
           justify-content: center;
-          // flex-direction: column;
         }
       }
 
       .hr_inicio {
         width: 50%;
 
-        height: 2px;
+        height: 1px;
         border-radius: 4px;
-        background-color: $cor_principal;
+        background-color: $cor_fonte_branca;
         opacity: 0.8;
         margin: 16px 0 16px 0;
 
@@ -78,9 +70,6 @@
           width: 75%;
         }
       }
-
-    
-
     }
     .div_img {
       position: relative;
@@ -144,7 +133,6 @@
   }
 }
 
-
 .rolar_para_baixo {
   color: $cor_fonte_branca;
   font-weight: 600;
@@ -155,12 +143,8 @@
   margin-top: 16px;
   text-decoration: underline;
 
-
   .icon {
     font-size: 2rem;
     transform: translateY(3px);
   }
-
-  
- 
 }

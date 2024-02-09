@@ -1,5 +1,5 @@
-@import "../../../css/variables";
-@import "../../../css/mixins";
+@import "../../../../css/variables";
+@import "../../../../css/mixins";
 
 #projetos {
   .container {
@@ -8,15 +8,10 @@
       justify-content: center;
       gap: 8px;
       margin-bottom: 16px;
-      a {
-        @include a_button-2;
-      }
-      .a_button1 {
-        @include a_button-1;
-      }
+      
       @include bp_mobile {
         justify-content: center;
-        //   flex-direction: column;
+       
       }
     }
 
@@ -25,6 +20,11 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 8px;
       margin-bottom: 16px;
+
+      @include bp_mobile {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
     }
   }
 }

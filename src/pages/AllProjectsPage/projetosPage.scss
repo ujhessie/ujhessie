@@ -1,0 +1,22 @@
+@import "../../css/variables";
+@import "../../css/mixins";
+
+
+section{
+    background-color: $cor_pretoFosco;
+}
+.divProjetos {
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+
+    @include bp_tablet {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include bp_mobile {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}

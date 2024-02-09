@@ -1,6 +1,6 @@
 import "./secTodosProjetos.scss";
 
-import TagsNav from "../../../components/TagsNav/TagsNav";
+
 import { useProjetos } from "../../../contexts/ProjetosContext";
 import CardProjeto from "../../../components/CardProjeto/CardProjeto";
 
@@ -13,7 +13,7 @@ const SecTodosProjetos = () => {
           <h2>
             Alguns dos meus <span>projetos</span>.
           </h2>
-          <TagsNav />
+     
         </div>
         <div className="div_projetos">
           {projetos.map((projeto) => (

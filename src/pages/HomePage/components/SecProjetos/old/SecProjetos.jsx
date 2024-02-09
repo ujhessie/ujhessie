@@ -1,12 +1,12 @@
 import "./secProjetos.scss";
 import { Link } from "react-router-dom";
-import CardProjeto from "../../../components/CardProjeto/CardProjeto";
-import { useProjetos } from "../../../contexts/ProjetosContext";
+import CardProjeto from "../../../../components/CardProjeto/CardProjeto";
+import { useProjetos } from "../../../../contexts/ProjetosContext";
+import { ButtonLink } from "../../../../components/ButtonLink/ButtonLink";
 
-const SecProjetos = () => {
-
+export const SecProjetos = () => {
   const { projetos } = useProjetos();
-  const ultimosProjetos = projetos.slice().reverse().slice(0,3)
+  const ultimosProjetos = projetos.slice().reverse().slice(0, 3);
 
   const HeaderSection = () => {
     return (
@@ -49,15 +49,20 @@ const SecProjetos = () => {
           ))}
         </div>
         <div className="div_botoes">
-          <Link to="/projetos" className="a_button1">
-            Ver mais projetos
-          </Link>
-          <a href="" className="a_button2">
-            Precisa de um serviço?
-          </a>
+          <ButtonLink
+            nomeExibido={"Ver todos os projetos"}
+            rota={"/projetos"}
+            rolarParaTopo={true}
+            tipo={1}
+            tamanho="grande"
+          />
+          <ButtonLink tipo={2}
+            nomeExibido="Precisa um serviço?"
+            tamanho="grande"
+          />
         </div>
       </div>
     </section>
   );
 };
-export default SecProjetos;
+
