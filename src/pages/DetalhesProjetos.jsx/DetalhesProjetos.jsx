@@ -46,9 +46,13 @@ export const DetalhesProjetos = () => {
                 <ButtonLink tipo={2} rota={projeto.linkVisitar} icon={<GoLinkExternal />}>
                   Visitar Projeto
                 </ButtonLink>
-                <ButtonLink rota={projeto.linkDeploy} icon={<IoDocumentTextOutline />} tipo={3}>
+                {(projeto.linkDeploy) && (<ButtonLink rota={projeto.linkDeploy} icon={<IoDocumentTextOutline />} tipo={3}>
                   Ver mais detalhes
-                </ButtonLink>
+                </ButtonLink>)}
+                
+                {/* <ButtonLink rota={projeto.linkDeploy} icon={<IoDocumentTextOutline />} tipo={3}>
+                  Ver mais detalhes
+                </ButtonLink> */}
               </div>
             </div>
           </main>

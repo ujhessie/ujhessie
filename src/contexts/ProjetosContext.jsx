@@ -98,11 +98,8 @@ const projetosIniciais  = [
     linkVisitar: "https://ujhessie.github.io/ggofertas/",
     linkDeploy: "https://github.com/ujhessie/ggofertas",
     imgs: [
-      "./imgs/projetos/sistemaDelivery/capa.png",
-      "./imgs/projetos/sistemaDelivery/1.png",
-      "./imgs/projetos/sistemaDelivery/2.png",
-      "./imgs/projetos/sistemaDelivery/3.png",
-      "./imgs/projetos/sistemaDelivery/4.png",
+      "./imgs/projetos/ggOfertas/1.png",
+      
     ],
   },
   {
@@ -125,6 +122,16 @@ const projetosIniciais  = [
       "./imgs/projetos/jrLavaJato/6.png",
     ],
   },
+  {
+    id:9,
+    name: "iNexus | Ecommerce em Wordpress",
+    desc: "iNexus é um ecommerce de Eletrônicos voltados a informática. O site é algo minimalista e atraente, dando ao usuário a sensação de conforto.",
+    data: "01/24",
+    recursos: ["Wordpress", "Elementor", "Woocommerce", "Photoshop"],
+    categoria: "Wordpress",
+    linkVisitar:"https://testesujhessie.rf.gd/",
+    imgs: ["./imgs/projetos/iNexus/1.png"]
+  }
 ];
 
 export const ProjetosContext = createContext();

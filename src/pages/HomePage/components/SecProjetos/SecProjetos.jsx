@@ -24,7 +24,7 @@ export const SecProjetos = () => {
             {/* <CardProjeto id={7}/> */}
           </div>
           <div className="divBotoes">
-            <ButtonLink rota={"/projetos/"} tipo={2} icon={<MdArrowOutward/>}>
+            <ButtonLink rota={"/projetos/"} rolarParaTopo={true} tipo={2} icon={<MdArrowOutward/>}>
               VER TODOS OS PROJETOS
             </ButtonLink>
             <ButtonLink tipo={3}>Ver serviços</ButtonLink>
