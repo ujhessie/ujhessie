@@ -1,0 +1,21 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+
+
+.div_home_page {
+    section {
+        display: block ;
+        padding: 50px 10px;
+        width: 100%;
+        margin:  0 auto;
+
+        @include bp_tablet {
+            padding: 30px 10px;
+        }
+
+        @include bp_mobile {
+            padding: 10px;
+        }
+    }
+}

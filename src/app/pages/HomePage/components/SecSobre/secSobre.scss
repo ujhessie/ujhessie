@@ -1,0 +1,41 @@
+@import "/src/app/styles/variables.scss";
+@import "/src/app/styles/mixins.scss";
+
+
+#secSobre {
+  background-color: $cor_pretoSecundario;
+  padding: 0 120px;
+
+  @include bp_tablet {
+    padding: 0px 80px;
+  }
+
+  @include bp_mobile {
+    padding: 0px 30px;
+  }
+
+  .divContentSecSobre {
+    padding: 60px 0 ;
+    color: $cor_brancoClaro;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    max-width: $breakpoint_desktop;
+    margin: 0 auto;
+
+    @include bp_mobile {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .divFlex {
+      .nomeSec {
+        color: $cor_brancoClaro;
+        display: block;
+        font-weight: 500;
+        font-size: 2.6rem;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

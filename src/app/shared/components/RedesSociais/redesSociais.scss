@@ -1,0 +1,72 @@
+@import "/src/app/styles/variables.scss";
+@import "/src/app/styles/mixins.scss";
+
+section {
+    background-color: $cor_pretoSecundario;
+}
+.conteudo {
+  background-color: $cor_principal;
+  padding: 60px 30px;
+  border-radius: 33px;
+  h2 {
+    text-align: center;
+  }
+
+  .divRedesSociais {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 32px;
+
+    @include bp_mobile {
+      flex-direction: column;
+    }
+    a {
+      color: $cor_pretoFosco;
+      background-color: $cor_brancoClaro;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      border: 2px solid $cor_brancoClaro;
+      padding: 16px 32px;
+      border-radius: 33px;
+
+      @include bp_mobile {
+        //    justify-content: space-between;
+        //   padding: 0px 32px;
+        //   aspect-ratio: 1/1;
+      }
+
+      p {
+        color: $cor_pretoFosco;
+        font-weight: 600;
+      }
+
+      .divIcon {
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        
+      }
+
+      p {
+        font-weight: 600;
+      }
+    }
+  }
+
+  p {
+    color: $cor_brancoClaro;
+    text-align: center;
+
+    a {
+      color: $cor_brancoClaro;
+      font-weight: 500;
+      text-decoration: underline;
+    }
+  }
+}
