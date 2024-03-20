@@ -2,10 +2,8 @@
 @import "/src/app/styles/variables";
 @import "/src/app/styles/mixins.scss";
 
-/* Estilo para header */
 #header {
   background-color: $cor_pretoFosco;
-
   display: flex;
   align-items: center;
   gap: 16px;
@@ -13,14 +11,14 @@
   position: relative;
   height: 80px;
   z-index: 1000;
-  padding: 0 120px;
+  padding: 10px 70px;
 
   @include bp_tablet {
-    padding: 10px 80px;
+    padding: 10px 30px;
   }
 
   @include bp_mobile {
-    padding: 10px 30px;
+    padding: 10px 10px;
   }
 
   .contentHeader {
@@ -29,59 +27,71 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // position: relative;
     max-width: $breakpoint_desktop;
     height: auto;
 
-    .logo {
-      font-weight: 600;
-      color: $cor_brancoClaro;
-      font-size: 3.2rem;
-
-      @include bp_mobile {
-        font-size: 2.4rem;
-      }
-    }
-
-    div {
+    .divLogoENav {
       display: flex;
       align-items: center;
       gap: 64px;
-    }
+      .logo {
+        font-weight: 600;
+        color: $cor_brancoClaro;
+        font-size: 3.2rem;
 
-    .navHeader {
-      display: flex;
-      gap: 32px;
-      align-items: center;
-      @include bp_tablet {
-        display: none;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        flex-direction: column;
-        background-color: $cor_pretoSecundario;
-        z-index: 1;
-        height: 100vh;
-        width: 100vw;
-        padding: 32px;
-        justify-content: left;
+        @include bp_tablet {
+          font-size: 2.8rem;
+        }
 
-        &.menuAtivo {
-          display: flex;
+        @include bp_mobile {
+          font-size: 2.4rem;
         }
       }
 
-      .itemNavHeader {
-        display: inline-block;
-        color: $cor_fonte_branca;
-        font-size: 1.6rem;
-        font-weight: 400;
-        transition: 400ms;
-        background-color: $cor_pretoSecundario;
-        z-index: 1000;
+      .navHeader {
+        display: flex;
+        gap: 32px;
+        align-items: center;
 
-        &:hover {
-          text-decoration: underline;
+        .itemNavHeader {
+          display: inline-block;
+          color: $cor_fonte_branca;
+          font-weight: 500;
+          transition: 400ms;
+          opacity: 0.8;
+          background-color: $cor_pretoSecundario;
+          text-decoration: underline transparent;
+          &:hover {
+            text-decoration: underline $cor_brancoClaro;
+            opacity: 1;
+          }
+        }
+
+        @include bp_tablet {
+          display: none;
+          position: absolute;
+          top: 80px;
+          left: 0;
+          flex-direction: column;
+          background-color: $cor_pretoFosco;
+          z-index: 1;
+          height: 100vh;
+          width: 100vw;
+
+          gap: 32px;
+          justify-content: left;
+
+          &.menuAtivo {
+            display: flex;
+          }
+        }
+
+        @include bp_mobile {
+          padding: 10px 10px;
+        }
+
+        .itemNavHeader {
+          z-index: 1000;
         }
       }
     }
@@ -89,38 +99,38 @@
     .divBotoes {
       gap: 16px;
       align-items: center;
+      display: flex;
 
-      a {
-        padding: 16px 24px;
+      .aContato {
+        padding: 8px 16px;
+        background-color: $cor_brancoClaro;
+        border-radius: 30px;
+        color: $cor_pretoFosco;
+        font-weight: 600;
+    
+
         @include bp_mobile {
           display: none;
         }
       }
 
-      // button {
-      //   padding: 16px ;
-      //   width: 44px;
-      //   aspect-ratio: 1/1;
-      //   // background-color: $cor_brancoClaro;
-      //   position: relative;
-        
-      //   .icon {
-      //     position: absolute;
-      //     left: 50%;
-      //     top: 50%;
-      //     transform: translate(-50%, -50%);
-      //     font-size: 1.6rem;
-      //   }
-      // }
-
       button {
-        
         background-color: transparent;
         color: $cor_brancoClaro;
         font-size: 4rem;
         display: none;
         align-items: center;
         justify-content: center;
+        .icon {
+          font-size: 4rem;
+          
+
+          @include bp_mobile {
+            font-size: 3.5rem;
+          }
+        }
+
+
         @include bp_tablet {
           display: flex;
         }

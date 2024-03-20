@@ -1,29 +1,26 @@
 import "./secInicio.scss";
 
-// import RedesSociais from "../../../../components/RedesSociais/RedesSociais";
-
-// import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
-import { ButtonLink } from "../../../../shared/components/ButtonLink/ButtonLink";
+import { Link } from "react-router-dom";
 
 export const SecInicio = () => {
-  
-
   return (
     <section id="secInicio">
       <div className="contentSec">
-        <div className="divImg">
-          <img src="./imgs/me.jpg" alt="Foto do Jesse Rodrigues" />
+        <div className="text">
+          <h1>Olá! Eu sou o Jesse Rodrigues</h1>
+          <p className="paragrafo">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
+            sapiente odit ducimus a iusto! Facere quidem eum impedit beatae
+            accusamus praesentium molestias explicabo non omnis cupiditate quod,
+            quis eos! Impedit.
+          </p>
+          <div className="botoes">
+            <Link className="button-verTrabalhos">Ver meus trabalhos</Link>
+            <Link className="button-sobre">Sobre mim</Link>
+          </div>
         </div>
-
-        <h1>Olá, Eu sou o Jesse Rodrigues</h1>
-        <p className="subtitulo">Desenvolvedor & Designer</p>
-        <p className="texto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
-          molestiae quia vero.
-        </p>
-        <div className="divBotoes">
-          <ButtonLink rolarPara={"redesSociais"} tipo={"2"}>Falar comigo</ButtonLink>
-          <ButtonLink rolarPara={"secProjetos"} tipo={"3"}>Ver meus trabalhos</ButtonLink>
+        <div className="img">
+          <img src="/imgs/me2.png" alt="" />
         </div>
       </div>
     </section>
