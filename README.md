@@ -1,7 +1,7 @@
 <!-- <img align="center" style="margin-bottom:100px; object-fit: contain" width=100% src="https://github.com/kyronsatt/kyronsatt/assets/97697928/2c964a53-346e-4bab-b7ff-67ca000100d4" />
 &nbsp;&nbsp;&nbsp; -->
 
-<h1 style="text-align:center">Hello, I am Jesse Rodrigues 🤯🦎</h1>
+<h1 align="center">Hello, I am Jesse Rodrigues 🤯🦎</h1>
 
 <p align="center">A young developer 👦 achieving success in technology 🖥️.
 <br>
