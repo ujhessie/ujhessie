@@ -1,10 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { IoClose } from "react-icons/io5";
 import "./style.css";
 import Header from "@/components/ui/Header";
 import MaxWidthContainer from "@/components/ui/MaxWidthContainer";
-import Tags  from "@/components/ui/Tags/Tags";
+import Tags from "@/components/ui/Tags/Tags";
 import { useProjetos } from "@/contexts/ProjetosContexts";
+import Link from "next/link";
 
 const ProjetoPage = ({ params }: { params: { projeto: string } }) => {
   const { projetos } = useProjetos();
@@ -58,6 +60,12 @@ const ProjetoPage = ({ params }: { params: { projeto: string } }) => {
           <Header fullWidth={false} />
         </div>
         <MaxWidthContainer>
+          <Link
+            href='/'
+            className='absolute p-4 aspect-[1/1] text-3xl rounded-full bg-white text-black flex justify-center itens-center -right-0.5 -top-4'
+          >
+            <IoClose />
+          </Link>
           <div className='content -mt-14'>
             <section className='bg-zinc-950 p-8 md:p-12  rounded-2xl shadow-sm text-center md:text-start grid md:grid-cols-2 gap-8'>
               <div className='content'>
@@ -87,14 +95,17 @@ const ProjetoPage = ({ params }: { params: { projeto: string } }) => {
                   ) : null}
                 </div>
                 <div className='tecnologias flex gap-2 flex-wrap mb-4 justify-center md:justify-start'>
-      
                   {projeto.tecnologias?.map((tec, index) => (
                     <Tags key={index} text={tec} />
                   ))}
                 </div>
               </div>
               <div className='capa hidden md:block overflow-hidden relative aspect-[4/3] rounded-2xl'>
-                <img src={projeto.imgCapa} className="absolute object-cover h-full w-full" alt='' />
+                <img
+                  src={projeto.imgCapa}
+                  className='absolute object-cover h-full w-full'
+                  alt=''
+                />
               </div>
             </section>
             <section className='mt-4 flex flex-col gap-4'>
