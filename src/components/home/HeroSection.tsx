@@ -6,14 +6,14 @@ export default function HeroSection() {
     <MaxWidthContainer>
       <section>
         <Header />
-        <div className='flex flex-col py-8 justify-center'>
+        {/* <div className='flex flex-col py-8 justify-center'>
           <h1 >
             Bem vindo ao meu portfólio
           </h1>
           <p className='opacity-80 m-auto text-center'>
             Aqui estão alguns dos meus projetos e trabalhos. Qualquer dúvida é só perguntar.
           </p>
-        </div>
+        </div> */}
       </section>
     </MaxWidthContainer>
   );
