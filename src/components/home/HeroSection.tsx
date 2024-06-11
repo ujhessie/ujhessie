@@ -6,13 +6,12 @@ export default function HeroSection() {
     <MaxWidthContainer>
       <section>
         <Header />
-        <div className='flex flex-col py-40 justify-center'>
-          <h1 className='text-7xl font-extrabold text-center mb-8'>Olá, Mundo!</h1>
-          <p className='w-[70%] m-auto text-center'>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-            aliquam pariatur rerum quae dignissimos nulla? Natus tempore
-            asperiores, omnis beatae id cumque veniam, quidem quia aliquam
-            nesciunt praesentium modi quasi.
+        <div className='flex flex-col py-8 justify-center'>
+          <h1 >
+            Bem vindo ao meu portfólio
+          </h1>
+          <p className='opacity-80 m-auto text-center'>
+            Aqui estão alguns dos meus projetos e trabalhos. Qualquer dúvida é só perguntar.
           </p>
         </div>
       </section>

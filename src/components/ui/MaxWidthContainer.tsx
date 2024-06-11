@@ -4,7 +4,7 @@ interface MaxWidthContainerProps {
 
 const MaxWidthContainer: React.FC<MaxWidthContainerProps> = ({ children }) => {
   return (
-    <div className='max-w-[1400px] mx-auto px-5 md:px-8 lg:px-16'>
+    <div className='max-w-[1400px] mx-auto px-5 '>
       {children}
     </div>
   );

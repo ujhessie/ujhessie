@@ -1,0 +1,20 @@
+.div-info-product {
+  box-shadow: inset 0px -60px 40px rgba(0, 0, 0, 0.8);
+}
+
+.titulo-card-projeto {
+}
+
+.card-projeto:hover {
+  .div-info-product {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .titulo-card-projeto {
+    opacity: 0.8;
+  }
+
+  img {
+    transform: scale(1.3) rotate(-15deg);
+    
+  }
+}
