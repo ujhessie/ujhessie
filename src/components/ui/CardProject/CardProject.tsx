@@ -25,7 +25,7 @@ const CardProject: React.FC<iCardProjeto> = ({ id }) => {
       />
       <div className='div-info-product my-transition absolute w-full h-full left-0 top-0 rounded-md  flex flex-col justify-end'>
         <div className='content p-4'>
-          <p className='titulo-card-projeto my-transition opacity-80 md:opacity-0 lg:opacity-0  text-white leading-tight lett  text-sm  font-semibold'>
+          <p className='titulo-card-projeto my-transition opacity-80  text-white leading-tight lett  text-sm  font-semibold'>
             {projeto?.titulo}
           </p>
         </div>

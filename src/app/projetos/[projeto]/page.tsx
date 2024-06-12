@@ -49,22 +49,41 @@ const ProjetoPage = ({ params }: { params: { projeto: string } }) => {
     );
   }
 
-  const BannerImg = () => {
+  const Banner = () => {
     return (
       <>
-        {projeto.imgBanner ? (
-          <img
-            className='absolute object-cover h-full w-full'
-            src={projeto.imgBanner}
-            alt=''
-          />
-        ) : (
-          <img
-            className='absolute object-cover h-full w-full'
-            src='/images/banner.png'
-            alt=''
-          />
-        )}
+        <div className='banner relative overflow-hidden aspect-[4/3] md:aspect-[21/9] lg:aspect-[4/1] '>
+          {projeto.imgBanner ? (
+            <img
+              className='absolute object-cover h-full w-full'
+              src={projeto.imgBanner}
+              alt=''
+            />
+          ) : (
+            <img
+              className='absolute object-cover h-full w-full'
+              src='/images/banner.png'
+              alt=''
+            />
+          )}
+          <Header fullWidth={false} />
+        </div>
+      </>
+    );
+  };
+
+  const Capa = () => {
+    return (
+      <>
+        {projeto.imgCapa ? (
+          <div className='capa  md:block overflow-hidden relative aspect-[4/3] rounded-2xl'>
+            <img
+              src={projeto.imgCapa}
+              className='absolute object-cover h-full w-full'
+              alt=''
+            />
+          </div>
+        ) : null}
       </>
     );
   };
@@ -110,48 +129,54 @@ const ProjetoPage = ({ params }: { params: { projeto: string } }) => {
     );
   };
 
+  const TagsTecnologias = () => {
+    return (
+      <>
+        <div className='tecnologias flex gap-2 flex-wrap mb-4 justify-center md:justify-start'>
+          {projeto.tecnologias?.map((tec, index) => (
+            <Tags key={index} text={tec} />
+          ))}
+        </div>
+      </>
+    );
+  };
+
+  const ImagensProjetos = () => {
+    return (
+      <>
+        <section className='mt-4 flex flex-col gap-4'>
+          {projeto.imgsProjeto?.map((img, index) => (
+            <img
+              key={index}
+              className='w-full rounded-2xl'
+              src={img}
+              alt={`Imagem do projeto ${index + 1}`}
+            />
+          ))}
+        </section>
+      </>
+    );
+  };
+
   return (
     <main>
       <section>
-        <div className='banner relative overflow-hidden aspect-[4/3] md:aspect-[21/9] lg:aspect-[4/1] '>
-          <BannerImg />
-          <Header fullWidth={false} />
-        </div>
+        <Banner />
         <MaxWidthContainer>
           <BotaoFechar />
           <div className='content -mt-14'>
             <section className='bg-zinc-950 p-4 md:p-12  rounded-2xl shadow-sm text-center md:text-start flex flex-col-reverse md:grid  md:grid-cols-2 gap-8'>
               <div className='content'>
                 <h2 className='titulo-projeto'>{projeto.titulo}</h2>
-
                 <p className='descricao-projeto text-normal mb-4'>
                   {projeto.desc}
                 </p>
                 <Botoes />
-                <div className='tecnologias flex gap-2 flex-wrap mb-4 justify-center md:justify-start'>
-                  {projeto.tecnologias?.map((tec, index) => (
-                    <Tags key={index} text={tec} />
-                  ))}
-                </div>
+                <TagsTecnologias />
               </div>
-              <div className='capa  md:block overflow-hidden relative aspect-[4/3] rounded-2xl'>
-                <img
-                  src={projeto.imgCapa}
-                  className='absolute object-cover h-full w-full'
-                  alt=''
-                />
-              </div>
+              <Capa />
             </section>
-            <section className='mt-4 flex flex-col gap-4'>
-              {projeto.imgsProjeto?.map((img, index) => (
-                <img
-                  key={index}
-                  className='w-full rounded-2xl'
-                  src={img}
-                  alt={`Imagem do projeto ${index + 1}`}
-                />
-              ))}
-            </section>
+            <ImagensProjetos />
           </div>
         </MaxWidthContainer>
       </section>
