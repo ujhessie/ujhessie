@@ -24,7 +24,7 @@ export default function ProjectsSection() {
           </a>
         </div> */}
 
-        <div className='projetos grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 2xl:grid-cols-4 w-full gap-4 mb-16'>
+        <div className='projetos grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 w-full gap-4 mb-16'>
           {projetos.map((projeto) => (
             <CardProject key={projeto.id} id={projeto.id} />
           ))}
