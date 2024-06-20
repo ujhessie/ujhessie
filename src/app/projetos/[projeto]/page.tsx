@@ -128,7 +128,7 @@ const ProjetoPage = ({ params }: { params: { projeto: string } }) => {
   const ImagensProjetos = () => {
     return (
       <>
-        <section className='mt-4   block  columns-3'>
+        <section className='mt-4   block  columns-2 lg:columns-3'>
           {projeto.imgsProjeto?.map((img, index) => (
             <img
               key={index}
