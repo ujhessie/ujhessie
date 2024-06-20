@@ -59,6 +59,7 @@ const projetos: Project[] = [
       
     ],
   },
+ 
 ];
 
 // Interface para o contexto de projetos

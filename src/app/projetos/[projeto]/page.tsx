@@ -12,22 +12,6 @@ import Link from "next/link";
 const ProjetoPage = ({ params }: { params: { projeto: string } }) => {
   const { projetos } = useProjetos();
 
-  // Verifique se os projetos foram carregados
-  // if (!projetos) {
-  //   return (
-  //     <main>
-  //       <section>
-  //         <MaxWidthContainer>
-  //           <Header />
-  //           <div className='content'>
-  //             <h1>Carregando...</h1>
-  //           </div>
-  //         </MaxWidthContainer>
-  //       </section>
-  //     </main>
-  //   );
-  // }
-
   // Procure o projeto com base no ID fornecido
   const projeto = projetos.find(
     (projeto) => projeto.id === Number(params.projeto)
@@ -144,11 +128,11 @@ const ProjetoPage = ({ params }: { params: { projeto: string } }) => {
   const ImagensProjetos = () => {
     return (
       <>
-        <section className='mt-4 flex flex-col gap-4'>
+        <section className='mt-4   block  columns-3'>
           {projeto.imgsProjeto?.map((img, index) => (
             <img
               key={index}
-              className='w-full rounded-2xl'
+              className='w-full rounded-2xl mt-4'
               src={img}
               alt={`Imagem do projeto ${index + 1}`}
             />
