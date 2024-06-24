@@ -8,6 +8,7 @@ import MaxWidthContainer from "@/components/ui/MaxWidthContainer";
 import Tags from "@/components/ui/Tags/Tags";
 import { useProjetos } from "@/contexts/ProjetosContexts";
 import Link from "next/link";
+import Banner from "./(components)/Banner";
 
 const ProjetoPage = ({ params }: { params: { projeto: string } }) => {
   const { projetos } = useProjetos();
@@ -32,29 +33,6 @@ const ProjetoPage = ({ params }: { params: { projeto: string } }) => {
       </main>
     );
   }
-
-  const Banner = () => {
-    return (
-      <>
-        <div className='banner relative overflow-hidden aspect-[4/3] md:aspect-[21/9] lg:aspect-[4/1] '>
-          {projeto.imgBanner ? (
-            <img
-              className='absolute object-cover h-full w-full'
-              src={projeto.imgBanner}
-              alt=''
-            />
-          ) : (
-            <img
-              className='absolute object-cover h-full w-full'
-              src='/images/banner.png'
-              alt=''
-            />
-          )}
-          <Header fullWidth={false} />
-        </div>
-      </>
-    );
-  };
 
   const Capa = () => {
     return (
@@ -125,14 +103,14 @@ const ProjetoPage = ({ params }: { params: { projeto: string } }) => {
     );
   };
 
-  const ImagensProjetos = () => {
+  const ImagensProjeto = () => {
     return (
       <>
-        <section className='mt-4   block  columns-2 lg:columns-3'>
+        <section className='mt-4   block  '>
           {projeto.imgsProjeto?.map((img, index) => (
             <img
               key={index}
-              className='w-full rounded-2xl mt-4'
+              className='w-full rounded-2xl block mb-4'
               src={img}
               alt={`Imagem do projeto ${index + 1}`}
             />
@@ -145,7 +123,7 @@ const ProjetoPage = ({ params }: { params: { projeto: string } }) => {
   return (
     <main>
       <section>
-        <Banner />
+        <Banner imgBanner={projeto.imgBanner} />
         <MaxWidthContainer>
           <BotaoFechar />
           <div className='content -mt-14'>
@@ -160,7 +138,7 @@ const ProjetoPage = ({ params }: { params: { projeto: string } }) => {
               </div>
               <Capa />
             </section>
-            <ImagensProjetos />
+            <ImagensProjeto />
           </div>
         </MaxWidthContainer>
       </section>

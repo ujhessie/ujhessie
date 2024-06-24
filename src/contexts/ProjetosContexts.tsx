@@ -59,6 +59,19 @@ const projetos: Project[] = [
       
     ],
   },
+  {
+    id: 4,
+    titulo: "DevShop | Loja virtual",
+    desc: "Loja virtual feita em WordPress: simples, elegante, otimizada e adaptável a diversas telas. Perfeita para qualquer nicho.",
+    // linkVisitarProjeto:"https://good-delivery.vercel.app/",
+    tecnologias:["Wordpress", "Woocommerce", "Elementor"],
+    imgCapa: "/images/projetos/4/capa.png",
+    // imgBanner: "/images/projetos/1/banner.png",
+    imgsProjeto: [
+      "/images/projetos/4/1.png",
+      "/images/projetos/4/2.png",
+    ],
+  },
  
 ];
 
