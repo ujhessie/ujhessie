@@ -1,7 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import Header from "@/components/ui/Header";
 
-const Banner = ({ imgBanner }: { imgBanner: string }) => {
+interface iBanner {
+  imgBanner: string;
+}
+
+const Banner: React.FC<iBanner> = ({ imgBanner }) => {
   return (
     <>
       <div className='banner relative overflow-hidden aspect-[4/3] md:aspect-[21/9] lg:aspect-[4/1] '>

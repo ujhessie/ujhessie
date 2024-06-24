@@ -123,7 +123,7 @@ const ProjetoPage = ({ params }: { params: { projeto: string } }) => {
   return (
     <main>
       <section>
-        <Banner imgBanner={projeto.imgBanner} />
+        <Banner imgBanner={projeto.imgBanner || ""} />
         <MaxWidthContainer>
           <BotaoFechar />
           <div className='content -mt-14'>
