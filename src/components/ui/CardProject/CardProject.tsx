@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useProjetos } from "@/contexts/ProjetosContexts";
 import "./style.css";
 import { ImgCapa, Tecnologias, Titulo } from "./components/";
-import ScrollReveal from "scrollreveal";
+
 import { useEffect } from 'react';
 
 const CardProject: React.FC<{ id: number }> = ({ id }) => {
@@ -12,13 +12,18 @@ const CardProject: React.FC<{ id: number }> = ({ id }) => {
     const projeto = projetos.find((project) => project.id === id);
 
     useEffect(() => {
-        ScrollReveal().reveal('.reveal', {
-            origin: 'bottom',
-            distance: '20px',
-            duration: 2000,
-            reset: true,
-            interval: 200,
-        });
+        if (typeof window !== "undefined") {
+            import("scrollreveal").then((module) => {
+                const sr = module.default();
+                sr.reveal(".reveal", {
+                    origin: "bottom",
+                    distance: "20px",
+                    duration: 1000,
+                    reset: true,
+                    interval: 200,
+                });
+            });
+        }
     }, []);
 
     return (

@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import ScrollReveal from "scrollreveal";
+
 import { useEffect } from 'react';
 
 export const ImagensProjeto: React.FC<{ imagens: string[] }> = ({
@@ -8,14 +8,20 @@ export const ImagensProjeto: React.FC<{ imagens: string[] }> = ({
 }) => {
 
     useEffect(() => {
-        ScrollReveal().reveal('.reveal', {
-            origin: 'bottom',
-            distance: '20px',
-            duration: 2000,
-            reset: true,
-            interval: 200,
-        });
+        if (typeof window !== "undefined") {
+            import("scrollreveal").then((module) => {
+                const sr = module.default();
+                sr.reveal(".reveal", {
+                    origin: "bottom",
+                    distance: "20px",
+                    duration: 1000,
+                    reset: true,
+                    interval: 200,
+                });
+            });
+        }
     }, []);
+
 
     return (
         <>
