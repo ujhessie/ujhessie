@@ -80,5 +80,18 @@
             "imgBanner": "",
             "imgsProjeto": ["/images/projetos/5/1.png"]
         }
+    },
+    {
+        "id": 6,
+        "titulo": "GIDELIVERY | Sistema de pedidos",
+        "desc": "Sistema de pedido para pequenas lanchonetes. O sistema é integrado com a função de pedidos via WhatsApp, além de ser escalável para um projeto Saas.",
+        "links": {},
+        "tecnologias": ["Next js", "MongoDB", "Figma"],
+        "imagens": {
+            "imgCapa": "/images/projetos/6/capa.png",
+            "imgSite": "",
+            "imgBanner": "",
+            "imgsProjeto": []
+        }
     }
 ]
