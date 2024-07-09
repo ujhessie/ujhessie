@@ -10,7 +10,7 @@ export default function Home() {
 
     return (
         <>
-            <MaxWidthContainer className='projetos w-full h-full mb-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2'>
+            <MaxWidthContainer className='projetos w-full h-full mb-16  gap-4'>
                 {projetos.map((projeto) => (
                     <CardProject key={projeto.id} id={projeto.id} />
                 ))}

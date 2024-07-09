@@ -93,5 +93,21 @@
             "imgBanner": "",
             "imgsProjeto": []
         }
+    },
+    {
+        "id":7,
+        "titulo": "API para upload de arquivos",
+        "desc": "Loja virtual com sistema de fidelidade. O sistema é feito em Next js, React js, Redux e Typescript.",
+        "links": {},
+        "tecnologias": ["Node js", "Multer", "Typescript", "Express"],
+        "imagens": {}
+    },
+    {
+        "id":8,
+        "titulo": "API | Salvar produtos em banco de dados",
+        "desc": "Loja virtual com sistema de fidelidade. O sistema é feito em Next js, React js, Redux e Typescript.",
+        "links": {},
+        "tecnologias": ["Node js", "Multer","Mongo DB", "Typescript", "Express"],
+        "imagens": {}
     }
 ]
