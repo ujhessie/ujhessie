@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useProjetos } from "@/contexts/ProjetosContexts";
 import "./style.css";
-import { ImgCapa, Tecnologias, Titulo } from "./components/";
+import { Desc, ImgCapa, Tecnologias, Titulo, VerMais } from "./components/";
 
 const CardProject: React.FC<{ id: number }> = ({ id }) => {
     const { projetos } = useProjetos();
@@ -18,6 +18,8 @@ const CardProject: React.FC<{ id: number }> = ({ id }) => {
                 <ImgCapa url={projeto?.imagens?.imgCapa} />
                 <Titulo titulo={projeto?.titulo} />
                 <Tecnologias tecnologias={projeto?.tecnologias} />
+                <Desc desc={projeto?.desc} />
+                <VerMais/>
             </div>
         </Link>
     );

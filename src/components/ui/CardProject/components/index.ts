@@ -1,3 +1,5 @@
 export {ImgCapa} from "./ImgCapa"
 export {Tecnologias} from "./Tecnologias"
 export { Titulo } from "./Titulo"
+export {Desc} from "./Desc"
+export {VerMais} from "./VerMais"

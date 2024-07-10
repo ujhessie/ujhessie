@@ -100,7 +100,9 @@
         "desc": "Loja virtual com sistema de fidelidade. O sistema é feito em Next js, React js, Redux e Typescript.",
         "links": {},
         "tecnologias": ["Node js", "Multer", "Typescript", "Express"],
-        "imagens": {}
+        "imagens": {
+            "imgCapa": "https://e0.pxfuel.com/wallpapers/86/808/desktop-wallpaper-js-node-js.jpg"
+        }
     },
     {
         "id":8,
@@ -108,6 +110,8 @@
         "desc": "Loja virtual com sistema de fidelidade. O sistema é feito em Next js, React js, Redux e Typescript.",
         "links": {},
         "tecnologias": ["Node js", "Multer","Mongo DB", "Typescript", "Express"],
-        "imagens": {}
+        "imagens": {
+            "imgCapa":"https://wallpapercave.com/wp/wp5070716.jpg"
+        }
     }
 ]
