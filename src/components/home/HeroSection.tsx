@@ -1,5 +1,5 @@
-import {Header} from "../ui/Header/Header";
 import MaxWidthContainer from "../ui/MaxWidthContainer";
+import { Header } from './../ui/Header/Header';
 
 export default function HeroSection() {
     return (
