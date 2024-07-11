@@ -1,4 +1,5 @@
 import Link from "next/link";
+import "./botao.css";
 
 interface iBotao {
     className?: string;
@@ -15,16 +16,25 @@ export const Botao: React.FC<iBotao> = ({
 }) => {
     const classeTipo = () => {
         return tipo == "padrao"
-            ? "bg-white text-black border-white hover:bg-transparent hover:text-white"
-            : "bg-transparent border-white text-white hover:text-black hover:bg-white";
+            ? " bg-gradient-to-r from-vermelho to-rosa text-white px-8 py-3 rounded-md fonte-titulo font-bold uppercase   lg:block "
+            : "bg-cinza text-white px-8 py-3 rounded-md fonte-titulo font-bold uppercase   lg:block ";
     };
 
     return (
         <Link
             href={rota}
-            className={`px-8 py-2 inline-block rounded-full border font-bold text-[14px] md:text-[16px] lg:text-[18px] ${classeTipo()} ${className}`}
+            className={` ${className} ${classeTipo()}`}
         >
             {children}
         </Link>
     );
 };
+
+{
+    /* <Link
+            href={rota}
+            className={`bg-gradient-to-r from-vermelho to-rosa text-white px-8 py-3 rounded-md fonte-titulo font-bold uppercase hidden lg:block ${className}`}
+        >
+            {children}
+        </Link> */
+}

@@ -1,20 +1,17 @@
+import { Botao } from '../ui/Botao/Botao';
 import MaxWidthContainer from "../ui/MaxWidthContainer";
-import { Header } from './../ui/Header/Header';
 
 export default function HeroSection() {
     return (
-        <MaxWidthContainer>
-            <section>
-                <Header />
-                {/* <div className='flex flex-col py-8 justify-center'>
-          <h1 >
-            Bem vindo ao meu portfólio
-          </h1>
-          <p className='opacity-80 m-auto text-center'>
-            Aqui estão alguns dos meus projetos e trabalhos. Qualquer dúvida é só perguntar.
-          </p>
-        </div> */}
-            </section>
+        <MaxWidthContainer className='text-center py-40'>
+            <h1 className='uppercase text-white'>Jesse Rodrigues</h1>
+            <p className='subtitulo texto-gradiente font-bold fonte-titulo mb-8 text-2xl lg:text-3xl'>
+                Desenvolvedor Web
+            </p>
+            <div className="botoes flex justify-center gap-4">
+                <Botao>Projetos</Botao>
+                <Botao tipo='transparente'>Sobre</Botao>
+            </div>
         </MaxWidthContainer>
     );
 }
