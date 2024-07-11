@@ -3,7 +3,7 @@
 
 import { useEffect } from 'react';
 
-export const Capa: React.FC<{ capa: string }> = ({ capa }) => {
+export const Capa: React.FC<{ capa: string,  status?: string }> = ({ capa, status }) => {
 
     useEffect(() => {
         if (typeof window !== "undefined") {
@@ -23,6 +23,7 @@ export const Capa: React.FC<{ capa: string }> = ({ capa }) => {
 
     return (
         <div className={`capa  md:block overflow-hidden relative aspect-[4/3] rounded-2xl col-span-3`}>
+               {status == "Em desenvolvimento"? (<p className="text-white z-10 absolute right-2 bottom-2 py-1 px-4 text-[12px] bg-cinza font-bold rounded-full">Projeto em desenvolvimento</p>): null}
             <img
                 src={capa}
                 className='absolute reveal object-cover h-full w-full'

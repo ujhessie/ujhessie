@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <footer className='bg-zinc-950 py-4'>
+        <footer className='bg-zinc-950 py-4 text-white'>
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
                 <p className='text-center text-sm opacity-75'>
                     Projetado e desenvolvido por{" "}

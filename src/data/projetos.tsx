@@ -13,6 +13,7 @@ export interface projeto {
         linkDeploy?: string;
     };
     tecnologias?: string[];
+    status?: "A desenvolver" | "Em desenvolvimento" | "Concluído";
 }
 
 export const projetos: projeto[] = [
@@ -110,6 +111,7 @@ export const projetos: projeto[] = [
             imgBanner: "",
             imgsProjeto: [],
         },
+        status: "Em desenvolvimento",
     },
     {
         id: 7,
@@ -121,6 +123,7 @@ export const projetos: projeto[] = [
             imgCapa:
                 "https://e0.pxfuel.com/wallpapers/86/808/desktop-wallpaper-js-node-js.jpg",
         },
+        status: "Em desenvolvimento",
     },
     {
         id: 8,
@@ -131,5 +134,6 @@ export const projetos: projeto[] = [
         imagens: {
             imgCapa: "https://wallpapercave.com/wp/wp5070716.jpg",
         },
+        status: "Em desenvolvimento",
     },
 ];

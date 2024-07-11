@@ -12,7 +12,7 @@ export default function Home() {
     return (
         <>
             <HeroSection/>
-            <MaxWidthContainer className='projetos w-full h-full mb-16  gap-4'>
+            <MaxWidthContainer id="div-rojetos" className='projetos w-full h-full mb-16  gap-4'>
                 {projetos.map((projeto) => (
                     <CardProject key={projeto.id} id={projeto.id} />
                 ))}

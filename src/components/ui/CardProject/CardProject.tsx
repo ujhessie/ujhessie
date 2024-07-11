@@ -15,8 +15,9 @@ const CardProject: React.FC<{ id: number }> = ({ id }) => {
             className=' card-projeto relative block cursor-pointer mb-4  w-full  p-2  border-cinza border-2 rounded-2xl overflow-hidden'
         >
             <div className=' content bg-cinza rounded-xl  p-4 overflow-hidden w-full flex flex-col gap-4'>
-                <ImgCapa url={projeto?.imagens?.imgCapa} />
+                <ImgCapa url={projeto?.imagens?.imgCapa} status={projeto?.status} />
                 <Titulo titulo={projeto?.titulo} />
+                
                 <Tecnologias tecnologias={projeto?.tecnologias} />
                 <Desc desc={projeto?.desc} />
                 <VerMais/>

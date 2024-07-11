@@ -9,8 +9,8 @@ export default function HeroSection() {
                 Desenvolvedor Web
             </p>
             <div className="botoes flex justify-center gap-4">
-                <Botao>Projetos</Botao>
-                <Botao tipo='transparente'>Sobre</Botao>
+                <Botao rota='#div-rojetos'>Projetos</Botao>
+                {/* <Botao tipo='transparente'>Sobre</Botao> */}
             </div>
         </MaxWidthContainer>
     );
