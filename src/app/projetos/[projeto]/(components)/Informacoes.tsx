@@ -32,7 +32,9 @@ export const Informacoes: React.FC<{
             <p className='descricao-projeto text-normal mb-4 reveal'>{descricao}</p>
             <div className='flex flex-row-reverse md:justify-end gap-4 flex-wrap justify-center reveal'>
                 {linkVisitar ? (
-                    <Botao rota={linkVisitar}>Visitar projeto</Botao>
+                 
+                        <Botao rota={linkVisitar} >Visitar projeto</Botao>
+            
                 ) : null}
                 {linkDeploy ? (
                     <Botao rota={linkDeploy} tipo='transparente'>
