@@ -26,7 +26,7 @@ export const Capa: React.FC<{ capa: string,  status?: string }> = ({ capa, statu
                {status == "Em desenvolvimento"? (<p className="text-white z-10 absolute right-2 bottom-2 py-1 px-4 text-[12px] bg-cinza font-bold rounded-full">Projeto em desenvolvimento</p>): null}
             <img
                 src={capa}
-                className='absolute reveal object-cover h-full w-full'
+                className='absolute reveal object-cover h-full w-full z-0'
                 alt='Imagem de Capa'
             />
         </div>

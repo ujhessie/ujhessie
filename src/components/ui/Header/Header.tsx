@@ -16,10 +16,10 @@ export const Header = () => {
     }
 
     return (
-        <MaxWidthContainer className='h-[100px] z-10 flex justify-between items-center  bg-preto'>
+        <MaxWidthContainer className='h-[100px] z-20 flex justify-between items-center  bg-preto'>
             <Logo />
             <nav className=' nav-header   lg:bg-cinza text-branco  fonte-corpo   '>
-                <div className='content  gap-4'>
+                <div className='content   gap-4'>
                     <div className='div-close md:hidden' onClick={fecharNav} >
                         <TfiClose className='icon text-3xl' />
                     </div>
