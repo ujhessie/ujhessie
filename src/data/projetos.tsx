@@ -127,12 +127,25 @@ export const projetos: projeto[] = [
     },
     {
         id: 8,
-        titulo: "API | Salvar produtos em banco de dados",
-        desc: "Loja virtual com sistema de fidelidade. O sistema é feito em Next js, React js, Redux e Typescript.",
-        links: {},
-        tecnologias: ["Node js", "Multer", "Mongo DB", "Typescript", "Express"],
+        titulo: "API | Upload de imagens para o Google Drive",
+        desc: "A API de Upload de Imagens é uma aplicação desenvolvida utilizando Express.js e Google Drive, projetada para facilitar o upload, armazenamento e visualização de imagens. O objetivo principal é permitir que usuários façam upload de imagens através de uma interface web, salvem essas imagens no Google Drive e acessem as URLs das imagens diretamente da aplicação. A API gerencia o upload dos arquivos, define permissões de compartilhamento apropriadas e retorna URLs acessíveis para visualização das imagens.",
+        links: {
+            linkVisitarProjeto: "https://github.com/ujhessie/upload-de-imagens"
+        },
+        tecnologias: ["Node js", "Multer", "Google API", "Typescript", "Express"],
         imagens: {
             imgCapa: "https://wallpapercave.com/wp/wp5070716.jpg",
+        },
+       
+    },
+    {
+        id: 9,
+        titulo: "Planejador de viagem | NLW Rocketseat 2024",
+        desc: "O projeto é um site desktop desenvolvido para facilitar a criação de planos de viagem em grupo, permitindo que os usuários registrem atividades e compartilhem links úteis. Este projeto faz parte do evento NLW Journey, oferecido pela Rocketseat, e visa promover a colaboração e a organização entre amigos durante o planejamento de viagens.",
+        links: {},
+        tecnologias: ["Vite", "React js", "Tailwind", "Typescript"],
+        imagens: {
+            imgCapa: "/images/projetos/9/capa.png",
         },
         status: "Em desenvolvimento",
     },
