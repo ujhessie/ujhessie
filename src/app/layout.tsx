@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
     
     return (
-        <html lang='pt-br'>
+        <html lang='pt-br' className='scroll-smooth'>
             <Contexts>
                 <body className={inter.className}>
                     <Header  />

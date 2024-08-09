@@ -6,6 +6,8 @@ interface iBotao {
     children: React.ReactNode;
     rota?: string;
     tipo?: "padrao" | "transparente";
+    icon?: React.ReactNode;
+    iconPosition?: "left" | "right";
 }
 
 export const Botao: React.FC<iBotao> = ({
@@ -13,13 +15,23 @@ export const Botao: React.FC<iBotao> = ({
     children,
     rota = "#",
     tipo = "padrao",
+    icon,
+    iconPosition = "right"
 }) => {
     const isExternal = rota.startsWith("http");
     const classeTipo = () => {
         return tipo === "padrao"
-            ? "bg-gradient-to-r from-vermelho to-rosa text-white px-8 py-3 rounded-md fonte-titulo font-bold uppercase lg:block"
-            : "bg-cinza text-white px-8 py-3 rounded-md fonte-titulo font-bold uppercase lg:block";
+            ? "bg-gradient-to-r from-vermelho to-rosa text-white px-8 py-3 rounded-md fonte-titulo font-bold uppercase flex  itens-center justify-between flex items-center"
+            : "bg-cinza text-white px-8 py-3 rounded-md fonte-titulo font-bold uppercase  flex itens-center justify-between flex items-center";
     };
+
+    const content = (
+        <>
+            {icon && iconPosition === "left" && <span className="mr-2">{icon}</span>}
+            {children}
+            {icon && iconPosition === "right" && <span className="ml-2">{icon}</span>}
+        </>
+    );
 
     if (isExternal) {
         return (
@@ -29,14 +41,14 @@ export const Botao: React.FC<iBotao> = ({
                 target="_blank" 
                 rel="noopener noreferrer"
             >
-                {children}
+                {content}
             </a>
         );
     }
 
     return (
         <Link href={rota} className={`${className} ${classeTipo()}`}>
-            {children}
+            {content}
         </Link>
     );
 };

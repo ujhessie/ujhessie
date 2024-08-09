@@ -149,4 +149,15 @@ export const projetos: projeto[] = [
         },
         status: "Em desenvolvimento",
     },
+    {
+        id: 10,
+        titulo: "JR Advocacia | Site de adovogados",
+        desc: "Um site elegante, minimalista, otimizado e responsivo. Feito em Wordpress, este site é facilmente escalável, podendo adicionar diversas funcionalidades.",
+        links: {},
+        tecnologias: ["Wordpress", "Elementor", "PHLOX", "CSS"],
+        imagens: {
+            imgCapa: "/images/projetos/10/capa.png",
+        },
+        status: "Concluído",
+    },
 ];

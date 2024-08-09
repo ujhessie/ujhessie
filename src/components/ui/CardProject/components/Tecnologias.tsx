@@ -4,12 +4,12 @@ export const Tecnologias: React.FC<{ tecnologias: string[] | undefined }> = ({
     tecnologias,
 }) => {
     return (
-        <div className='flex gap-1 flex-wrap'>
+        <div className='tecnologias flex gap-1  flex-wrap'>
             {tecnologias
                 ? tecnologias?.map((tecnologia) => (
                       <p
                           key={tecnologia}
-                          className={`px-[8px] py-[4px] text-[10px] 
+                          className={`px-[8px]  py-[4px] text-[10px] 
                             
                             md:px-[8px] md:py-[4px]
 

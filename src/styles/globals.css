@@ -69,3 +69,8 @@ h2 {
         column-count: 3;
     }
 }
+body {
+    background-image: url("/images/bg.svg");
+    background-size: 150%;
+    background-position: center center;
+}
