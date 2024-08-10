@@ -4,7 +4,7 @@ export const Tecnologias: React.FC<{ tecnologias: string[] | undefined }> = ({
     tecnologias,
 }) => {
     return (
-        <div className='tecnologias flex gap-1  flex-wrap'>
+        <div className='tecnologias flex gap-1 justify-start flex-wrap'>
             {tecnologias
                 ? tecnologias?.map((tecnologia) => (
                       <p

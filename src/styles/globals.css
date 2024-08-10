@@ -47,7 +47,7 @@ h2 {
 }
 
 .texto-gradiente {
-    background: linear-gradient(90deg, #FF4949, #BF36FF);
+    background: linear-gradient(90deg, #ff4949, #bf36ff);
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -74,3 +74,6 @@ body {
     background-size: 150%;
     background-position: center center;
 }
+
+
+

@@ -8,7 +8,6 @@ import { TfiClose } from "react-icons/tfi";
 import { useRouter } from "next/navigation";
 
 import { Informacoes, Capa, ImagensProjeto } from "./(components)";
-import { useEffect } from "react";
 
 const ProjetoPage = ({ params }: { params: { projeto: string } }) => {
     const { projetos } = useProjetos();
@@ -17,27 +16,11 @@ const ProjetoPage = ({ params }: { params: { projeto: string } }) => {
     );
     const router = useRouter();
 
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-            import("scrollreveal").then((module) => {
-                const sr = module.default();
-                sr.reveal(".reveal", {
-                    origin: "bottom",
-                    distance: "20px",
-                    duration: 1000,
-                    reset: true,
-                    interval: 200,
-                });
-            });
-        }
-    }, []);
-
     return (
         <main>
             {/* <Banner banner={projeto?.imagens.imgBanner} /> */}
             <MaxWidthContainer>
                 <section className='content    bg-cinza/50 p-4 pb-6 md:p-4 rounded-2xl shadow-sm text-center md:text-start flex flex-col md:grid md:grid-cols-7  gap-8 mb-8 text-white cursor-pointer'>
-
                     <div
                         onClick={() => router.back()}
                         className='div-close z-10 reveal absolute bg-white rounded-full right-7 p-2 top-3'
@@ -56,7 +39,6 @@ const ProjetoPage = ({ params }: { params: { projeto: string } }) => {
                         linkVisitar={projeto?.links.linkVisitarProjeto}
                         linkDeploy={projeto?.links.linkDeploy}
                     />
-                    
                 </section>
 
                 <ImagensProjeto imagens={projeto?.imagens.imgsProjeto ?? []} />
