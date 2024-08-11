@@ -1,6 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
-
+import { useEffect } from "react";
 import Link from "next/link";
 import { useProjetos } from "@/contexts/ProjetosContexts";
 import "./style.css";
@@ -10,14 +9,30 @@ const CardProject: React.FC<{ id: number }> = ({ id }) => {
     const { projetos } = useProjetos();
     const projeto = projetos.find((project) => project.id === id);
 
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            import("scrollreveal").then((module) => {
+                const sr = module.default();
+                sr.reveal(".reveal", {
+                    origin: "bottom",
+                    distance: "20px",
+                    duration: 1000,
+                    reset: false,
+                    interval: 300,
+                });
+            });
+        }
+    }, []);
+
     if (!projeto) {
         return <div>Projeto não encontrado</div>;
     }
 
     const handleScrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }, 500); // Delay de 500ms
     };
-
     return (
         <Link
             href={`projetos/${projeto.id}`}

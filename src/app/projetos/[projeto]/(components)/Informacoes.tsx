@@ -9,6 +9,8 @@ export const Informacoes: React.FC<{
     linkVisitar?: string;
     linkDeploy?: string;
 }> = ({ titulo, descricao = "", linkVisitar, linkDeploy }) => {
+
+    
     useEffect(() => {
         if (typeof window !== "undefined") {
             import("scrollreveal").then((module) => {
