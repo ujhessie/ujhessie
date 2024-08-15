@@ -105,7 +105,10 @@ export const projetos: projeto[] = [
         id: 6,
         titulo: "GIDELIVERY | Sistema de pedidos",
         desc: "Sistema de pedido para pequenas lanchonetes. O sistema é integrado com a função de pedidos via WhatsApp, além de ser escalável para um projeto Saas.",
-        links: {},
+        links: {
+            linkDeploy:"https://github.com/ujhessie/GiDelivery",
+            linkVisitarProjeto:"https://ujhessie.github.io/GiDelivery/"
+        },
         tecnologias: ["Next js", "MongoDB", "Figma"],
         imagens: {
             imgCapa: "/images/projetos/6/capa.png",
