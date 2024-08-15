@@ -74,7 +74,9 @@ export const projetos: projeto[] = [
         id: 4,
         titulo: "DevShop | Loja virtual",
         desc: "Loja virtual feita em WordPress: simples, elegante, otimizada e adaptável a diversas telas. Perfeita para qualquer nicho.",
-        links: {},
+        links: {
+            linkVisitarProjeto:'https://dev-devshop-ujhessie.pantheonsite.io/',
+        },
         tecnologias: ["Wordpress", "Woocommerce", "Elementor"],
         imagens: {
             imgCapa: "/images/projetos/4/capa.png",
@@ -153,7 +155,9 @@ export const projetos: projeto[] = [
         id: 10,
         titulo: "JR Advocacia | Site de adovogados",
         desc: "Um site elegante, minimalista, otimizado e responsivo. Feito em Wordpress, este site é facilmente escalável, podendo adicionar diversas funcionalidades.",
-        links: {},
+        links: {
+            linkVisitarProjeto:"https://jr-advocacia.vercel.app/",
+        },
         tecnologias: ["Wordpress", "Elementor", "PHLOX", "CSS"],
         imagens: {
             imgCapa: "/images/projetos/10/capa.png",

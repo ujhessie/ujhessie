@@ -11,7 +11,7 @@ export const ProjectsSection = () => {
     const { projetos } = useProjetos();
 
     return (
-        <MaxWidthContainer>
+        <MaxWidthContainer className='mb-8'>
             <div id='div-projetos' className='projetos w-full h-full gap-4'>
                 {projetos.map((projeto) => (
                     <CardProject key={projeto.id} id={projeto.id} />
