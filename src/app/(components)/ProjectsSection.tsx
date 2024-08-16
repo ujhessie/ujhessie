@@ -25,6 +25,7 @@ export const ProjectsSection = () => {
             >
                 Ver mais projetos
             </Botao>
+            
         </MaxWidthContainer>
     );
 };
