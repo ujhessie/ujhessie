@@ -164,6 +164,7 @@ export const projetos: projeto[] = [
         tecnologias: ["Wordpress", "Elementor", "PHLOX", "CSS"],
         imagens: {
             imgCapa: "/images/projetos/10/capa.png",
+            imgsProjeto: ["/images/projetos/10/2.webp"]
         },
         status: "Concluído",
     },

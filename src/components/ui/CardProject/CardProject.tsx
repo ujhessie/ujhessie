@@ -31,7 +31,7 @@ const CardProject: React.FC<{ id: number }> = ({ id }) => {
     const handleScrollToTop = () => {
         setTimeout(() => {
             window.scrollTo({ top: 0, behavior: "smooth" });
-        }, 500); // Delay de 500ms
+        }, 1000); // Delay de 500ms
     };
     return (
         <Link

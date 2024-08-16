@@ -50,7 +50,7 @@ export const HeroSection = () => {
     };
 
     return (
-        <MaxWidthContainer className='text-center py-32'>
+        <MaxWidthContainer className='text-center py-32 reveal'>
             <div className='pb-24'>
                 <span className='text-white border px-2 py-1 text-[14px] md:text-[16px] lg:text-[18px] opacity-85 rounded-full mb-4 font-medium  lg:px-6  md:px-4    inline-block'>
                     Olá! Bem vindo(a)!
