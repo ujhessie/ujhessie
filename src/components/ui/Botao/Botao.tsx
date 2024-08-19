@@ -21,7 +21,7 @@ export const Botao: React.FC<iBotao> = ({
     const isExternal = rota.startsWith("http");
     const classeTipo = () => {
         return tipo === "padrao"
-            ? "bg-gradient-to-r from-vermelho to-rosa text-white px-8 py-3 rounded-md fonte-titulo font-bold uppercase flex  itens-center justify-between flex items-center"
+            ? "bg-gradient-to-r from-vermelho to-rosa text-white px-8 py-3 rounded-md fonte-titulo font-bold uppercase inline-flex   itens-center justify-between flex items-center"
             : "bg-cinza text-white px-8 py-3 rounded-md fonte-titulo font-bold uppercase  flex itens-center justify-between flex items-center";
     };
 

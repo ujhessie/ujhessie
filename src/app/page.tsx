@@ -1,12 +1,13 @@
 "use client";
 
-import { HeroSection, ProjectsSection } from "./(components)";
+import { ContactSection, HeroSection, ProjectsSection } from "./(components)";
 
 export default function Home() {
     return (
         <>
             <HeroSection />
             <ProjectsSection />
+            <ContactSection />
         </>
     );
 }

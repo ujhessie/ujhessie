@@ -21,11 +21,10 @@ export const ProjectsSection = () => {
             <Botao
                 icon={<IoIosArrowForward />}
                 rota='/projetos'
-                className='md:hidden reveal mb-16'
+                className='md:hidden reveal mb-4'
             >
                 Ver mais projetos
             </Botao>
-            
         </MaxWidthContainer>
     );
 };

@@ -8,6 +8,7 @@
     border-image-slice: 1;
     border-width: 5px;
     border-radius: 20px;
+    margin: 0 auto;
 
     border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
     border-image: 20px;
