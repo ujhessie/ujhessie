@@ -1,12 +1,21 @@
- const CriacaoSitePage = () => {
-    return (<div>
-        <div>
-            <h2>Slide</h2>
-            <p>Slides de videos, banners e promoções</p>
-        </div>
+/* eslint-disable @next/next/no-img-element */
+"use client";
 
-        
-    </div>);
-}
+import { BannerContato } from "@/components/ui/BannerContato/BannerContato";
+import { HeroSection, CardsVantagens, ProjetosSections } from "./(componets)";
 
-export default CriacaoSitePage
+// Import Swiper React components
+
+const CriacaoSitePage = () => {
+    return (
+        <>
+            <HeroSection />
+            <CardsVantagens />
+            <ProjetosSections />
+            <h2 className='text-white'>Depoimentos</h2>
+            <BannerContato />
+        </>
+    );
+};
+
+export default CriacaoSitePage;
