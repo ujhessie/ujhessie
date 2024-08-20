@@ -20,28 +20,33 @@ const ProjetoPage = ({ params }: { params: { projeto: string } }) => {
         <main>
             {/* <Banner banner={projeto?.imagens.imgBanner} /> */}
             <MaxWidthContainer>
-                <section className='content    bg-cinza/50 p-4 pb-6 md:p-4 rounded-2xl shadow-sm text-center md:text-start flex flex-col md:grid md:grid-cols-7  gap-8 mb-8 text-white cursor-pointer'>
-                    <div
+                <section className='content  relative    shadow-sm text-center md:text-start flex flex-col-reverse md:grid md:grid-cols-5  gap-4 mb-8 text-white cursor-pointer'>
+                    {/* <div
                         onClick={() => router.back()}
                         className='div-close z-10 reveal absolute bg-white rounded-full right-7 p-2 top-3'
                     >
                         <TfiClose className='icon text-xl text-cinza' />
+                    </div> */}
+
+                    <div className='col-span-3 mb-4 grid grid-cols-1 gap-8'>
+                        <Capa
+                            status={projeto?.status}
+                            capa={projeto?.imagens.imgCapa ?? ""}
+                        />
+                         <ImagensProjeto imagens={projeto?.imagens.imgsProjeto ?? []} />
                     </div>
 
-                    <Capa
-                        status={projeto?.status}
-                        capa={projeto?.imagens.imgCapa ?? ""}
-                    />
-
-                    <Informacoes
-                        titulo={projeto?.titulo ?? ""}
-                        descricao={projeto?.desc ?? ""}
-                        linkVisitar={projeto?.links.linkVisitarProjeto}
-                        linkDeploy={projeto?.links.linkDeploy}
-                    />
+                    <div className='col-span-2  bg-cinza/50 p-4 md:p-4 rounded-2xl h-min  md:sticky md:top-4'>
+                        <Informacoes
+                            titulo={projeto?.titulo ?? ""}
+                            descricao={projeto?.desc ?? ""}
+                            linkVisitar={projeto?.links.linkVisitarProjeto}
+                            linkDeploy={projeto?.links.linkDeploy}
+                        />
+                    </div>
                 </section>
 
-                <ImagensProjeto imagens={projeto?.imagens.imgsProjeto ?? []} />
+               
             </MaxWidthContainer>
         </main>
     );

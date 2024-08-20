@@ -6,7 +6,7 @@ export const ImagensProjeto: React.FC<{ imagens: string[] }> = ({
     imagens,
 }) => {
     return (
-        <div id="div-imagens-page-projeto">
+        <div id="div-imagens-page-projeto" className='grid gap-4 grid-cols-1'>
             {imagens.map((img, index) => (
                 <img
                     key={index}
