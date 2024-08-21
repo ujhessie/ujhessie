@@ -3,10 +3,10 @@
 
 <h1 align="center">Olá, sou o Jesse!🤯🦎</h1>
 
-<p align="center">Olá! Eu sou o Jesse, desenvolvedor web com paixão por criar interfaces e soluções dinâmicas. Tenho experiência com Next.js, React.js, Node.js, JavaScript, TypeScript, Tailwind CSS, Sass e Figma. Estou sempre aprimorando minhas habilidades para me tornar um desenvolvedor full-stack. 🖥️.
+<p align="center">Olá! Eu sou o Jesse, desenvolvedor web com paixão por criar interfaces e soluções dinâmicas. Tenho experiência com Next.js, React.js, Node.js, JavaScript, TypeScript, Tailwind CSS, Sass e Figma.
 <br>
 <br>
-Tenho trabalhado em projetos pessoais e como freelancer, aplicando e fortalecendo meus conhecimentos. Busco constantemente novos desafios e oportunidades para crescer na área.</p>&nbsp;
+Dê uma olhada no meu perfl e portfólio. Qualquer dúvida entre em contato comigo.</p>&nbsp;
 
 <div  align="center" style="margin-bottom:100px">
 
@@ -41,7 +41,7 @@ Tenho trabalhado em projetos pessoais e como freelancer, aplicando e fortalecend
 ![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)&nbsp;
 ![Graphql](https://img.shields.io/badge/graphql-E10098?style=for-the-badge&logo=graphql&logoColor=white)&nbsp; -->
 
-<img src="https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png" min-width="400px" max-width="400px" width="100%" align="right" alt="Computador iuriCode">
+
 
 <!-- #### Secondary Stack:
 
@@ -81,4 +81,3 @@ Tenho trabalhado em projetos pessoais e como freelancer, aplicando e fortalecend
 <!-- <a href="https://medium.com/@rafaelalexandrino" target="_blank"><img src="https://img.shields.io/badge/-Medium-%23000000?style=for-the-badge&logo=medium&logoColor=white"  target="_blank"></a> 
 </div>&nbsp;&nbsp; -->
 
-<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=8F0D87&height=120&section=footer"/>

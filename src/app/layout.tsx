@@ -5,6 +5,7 @@ import Contexts from "@/contexts/Contexts";
 import Footer from "@/components/ui/Footer/Footer";
 import { Header } from "@/components/ui/Header/Header";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({
     return (
         <html lang='pt-br' className='scroll-smooth'>
             <Contexts>
+                
                 <body className={inter.className}>
                     <Header />
                     {children}
