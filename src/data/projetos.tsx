@@ -168,4 +168,18 @@ export const projetos: projeto[] = [
         },
         status: "Concluído",
     },
+    {
+        id: 11,
+        titulo: "Estaçã da Moda",
+        desc: "Loja virtual em Wordpress para loja de roupas femininas. Minimalista, elegante, otimizada, responsiva e de fácil gestão.",
+        links: {
+            linkVisitarProjeto:"https://dev-estaca-da-moda.pantheonsite.io/",
+        },
+        tecnologias: ["Wordpress", "Elementor", "PHLOX", "CSS"],
+        imagens: {
+            imgCapa: "/images/projetos/11/capa.png",
+            imgsProjeto: ["/images/projetos/11/2.png"]
+        },
+        status: "Concluído",
+    },
 ];
