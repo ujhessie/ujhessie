@@ -236,7 +236,7 @@ export const projetos: projeto[] = [
         tecnologias: ["Photoshop", "Illustrator"],
         imagens: {
             imgCapa: "/images/projetos/15/capa.png",
-            imgsProjeto: ["/images/projetos/15/1.png", "/images/projetos/15/2.png", "/images/projetos/15/3.png", "/images/projetos/14/4.png", "/images/projetos/14/5.png", "/images/projetos/14/6.png"]
+            imgsProjeto: ["/images/projetos/15/1.png", "/images/projetos/15/2.png", "/images/projetos/15/3.png", ]
          
         },
         status: "Concluído",
