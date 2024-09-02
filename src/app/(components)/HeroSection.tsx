@@ -3,14 +3,11 @@
 import MaxWidthContainer from "@/components/ui/MaxWidthContainer";
 import { Botao } from "@/components/ui/Botao/Botao";
 
-import { RedesSociais } from '@/components/ui/RedesSociais/RedesSociais';
+import { RedesSociais } from "@/components/ui/RedesSociais/RedesSociais";
 
 export const HeroSection = () => {
-
-    
-
     return (
-        <MaxWidthContainer className='text-center py-32 reveal'>
+        <MaxWidthContainer className='text-center pt-24 lg:pt-32 lg:py-20 reveal'>
             <div className='pb-24'>
                 <span className='text-white border px-2 py-1 text-[14px] md:text-[16px] lg:text-[18px] opacity-85 rounded-full mb-4 font-medium  lg:px-6  md:px-4    inline-block'>
                     Olá! Bem vindo(a)!

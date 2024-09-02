@@ -1,7 +1,7 @@
 "use client";
 import { Botao } from "@/components/ui/Botao/Botao";
 
-import { useEffect } from "react";
+
 
 export const Informacoes: React.FC<{
     titulo: string;
@@ -11,20 +11,7 @@ export const Informacoes: React.FC<{
 }> = ({ titulo, descricao = "", linkVisitar, linkDeploy }) => {
 
     
-    // useEffect(() => {
-    //     if (typeof window !== "undefined") {
-    //         import("scrollreveal").then((module) => {
-    //             const sr = module.default();
-    //             sr.reveal(".reveal", {
-    //                 origin: "bottom",
-    //                 distance: "20px",
-    //                 duration: 1000,
-    //                 reset: true,
-    //                 interval: 200,
-    //             });
-    //         });
-    //     }
-    // }, []);
+  
 
     return (
         <div className='content  col-span-4 '>

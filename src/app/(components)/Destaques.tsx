@@ -1,5 +1,5 @@
 import MaxWidthContainer from "@/components/ui/MaxWidthContainer";
-import { BadgeCheck, MonitorCheck, MonitorSmartphone, ScanSearch } from "lucide-react";
+
 import { useState, useEffect } from "react";
 
 // Import Swiper styles
@@ -11,7 +11,7 @@ import "swiper/css/autoplay"; // Importa o CSS de autoplay
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
-export const CardsVantagens = () => {
+export const Destaques = () => {
     const [slidesPerView, setSlidesPerView] = useState(4);
 
     const handleResize = () => {
@@ -32,24 +32,8 @@ export const CardsVantagens = () => {
         };
     }, []);
 
-    const Card = ({
-        titulo,
-        texto,
-        icon,
-    }: {
-        titulo: string;
-        texto?: string;
-        icon: React.ReactNode;
-    }) => (
-        <div className='bg-zinc-950/50 rounded-lg hover:bg-zinc-950 my-transition text-white p-8 flex gap-4 items-center md:block md:text-center'>
-            <div className='logo font-extrabold text-branco text-[32px] fonte-titulo flex justify-center'>
-                {icon}
-            </div>
-            <div>
-                <h3 className='texto-gradiente'>{titulo}</h3>
-                <p className='opacity-80'>{texto}</p>
-            </div>
-        </div>
+    const Card = () => (
+        <div className='bg-zinc-950/50 aspect-[16/9] rounded-lg hover:bg-zinc-950 my-transition text-white 0 flex gap-4 items-center md:block md:text-center'></div>
     );
 
     return (
@@ -66,38 +50,17 @@ export const CardsVantagens = () => {
                 speed={1000}
             >
                 <SwiperSlide>
-                    <Card
-                        icon={
-                            <MonitorCheck className='h-[70px] w-[70px]  ' />
-                        }
-                        titulo='Design Moderno e Elegante'
-                    />
+                    <Card />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Card
-                        icon={
-                            <MonitorSmartphone className='h-[70px] w-[70px]  ' />
-                        }
-                        titulo='Sites responsivos'
-                    />
+                    <Card />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Card
-                        icon={
-                            <BadgeCheck className='h-[70px] w-[70px]  ' />
-                        }
-                        titulo='CEO Otimizado'
-                    />
+                    <Card />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Card
-                        icon={
-                            <ScanSearch className='h-[70px] w-[70px]  ' />
-                        }
-                        titulo='Suporte Personalizado'
-                    />
+                    <Card />
                 </SwiperSlide>
-                
             </Swiper>
         </MaxWidthContainer>
     );

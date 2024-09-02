@@ -170,7 +170,7 @@ export const projetos: projeto[] = [
     },
     {
         id: 11,
-        titulo: "Estaçã da Moda",
+        titulo: "Estação da Moda",
         desc: "Loja virtual em Wordpress para loja de roupas femininas. Minimalista, elegante, otimizada, responsiva e de fácil gestão.",
         links: {
             linkVisitarProjeto:"https://dev-estaca-da-moda.pantheonsite.io/",
@@ -182,4 +182,95 @@ export const projetos: projeto[] = [
         },
         status: "Concluído",
     },
+    {
+        id: 12,
+        titulo: "API BreackingNews",
+        desc: "Back End do sistema de blog utilizando React, MongoDB, Express e outros",
+        links: {
+         
+        },
+        tecnologias: ["Wordpress", "Elementor", "PHLOX", "CSS"],
+        imagens: {
+            imgCapa: "https://img.freepik.com/free-photo/html-css-collage-concept-with-person_23-2150062004.jpg?t=st=1724621259~exp=1724624859~hmac=8f7ba23b5c31565d7ebed60e346abca7520f99c5cf0b30cd2d54eb02ded3da7f&w=740",
+         
+        },
+        status: "Em desenvolvimento",
+    },
+    {
+        id: 13,
+        titulo: "Social Media | Churrasco do Geilson",
+        
+        links: {
+         
+        },
+        tecnologias: ["Photoshop", "Illustrator"],
+        imagens: {
+            imgCapa: "/images/projetos/13/capa.png",
+            imgsProjeto: ["/images/projetos/13/1.png","/images/projetos/13/6.png", "/images/projetos/13/2.png", "/images/projetos/13/3.png", "/images/projetos/13/4.png", "/images/projetos/13/5.png"]
+         
+        },
+        status: "Concluído",
+    },
+    {
+        id: 14,
+        titulo: "Social Media | Lava Jato",
+        
+        links: {
+         
+        },
+        tecnologias: ["Photoshop", "Illustrator"],
+        imagens: {
+            imgCapa: "/images/projetos/14/capa.png",
+            imgsProjeto: ["/images/projetos/14/1.png", "/images/projetos/14/2.png", "/images/projetos/14/3.png", "/images/projetos/14/4.png", "/images/projetos/14/5.png", "/images/projetos/14/6.png"]
+         
+        },
+        status: "Concluído",
+    },
+    {
+        id: 15,
+        titulo: "Identidade Visual | Tia Bia",
+        
+        links: {
+         
+        },
+        tecnologias: ["Photoshop", "Illustrator"],
+        imagens: {
+            imgCapa: "/images/projetos/15/capa.png",
+            imgsProjeto: ["/images/projetos/15/1.png", "/images/projetos/15/2.png", "/images/projetos/15/3.png", "/images/projetos/14/4.png", "/images/projetos/14/5.png", "/images/projetos/14/6.png"]
+         
+        },
+        status: "Concluído",
+    },
+    {
+        id: 16,
+        titulo: "Identidade Visual | Pivete Mimado",
+        
+        links: {
+         
+        },
+        tecnologias: ["Photoshop", "Illustrator"],
+        imagens: {
+            imgCapa: "/images/projetos/16/capa.png",
+            imgsProjeto: ["/images/projetos/16/1.png", "/images/projetos/16/2.png", "/images/projetos/16/3.png", "/images/projetos/16/4.png", "/images/projetos/16/5.png",]
+         
+        },
+        status: "Concluído",
+    },
+    {
+        id: 17,
+        titulo: "Identidade Visual | Good Delivery",
+        desc: "Identidade Visual para uma lanchonte.",
+        links: {
+         
+        },
+        tecnologias: ["Photoshop", "Illustrator"],
+        imagens: {
+            imgCapa: "/images/projetos/17/capa.png",
+            imgsProjeto: ["/images/projetos/17/1.png", "/images/projetos/17/2.png", "/images/projetos/17/3.png", "/images/projetos/17/4.png", "/images/projetos/17/5.png",]
+         
+        },
+        status: "Concluído",
+    },
+  
+  
 ];

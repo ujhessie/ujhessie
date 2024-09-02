@@ -8,7 +8,6 @@ import "swiper/css/pagination"; // Importando o CSS de paginação
 import MaxWidthContainer from "@/components/ui/MaxWidthContainer";
 import { Navigation, Pagination } from "swiper/modules";
 
-
 export const HeroSection = () => {
     return (
         <MaxWidthContainer>
@@ -23,15 +22,15 @@ export const HeroSection = () => {
                         pagination={{ clickable: true }} // Habilita a paginação com bolinhas clicáveis
                         modules={[Navigation, Pagination]} // Inclua os módulos de navegação e paginação
                     >
-                        <SwiperSlide className='aspect-[32/9] bg-violet-300 rounded-md p-4'>
+                        <SwiperSlide className='aspect-[16/9] md:aspect-[21/9] lg:aspect-[32/9] bg-violet-300 rounded-md p-4 '>
                             Slide 1
                         </SwiperSlide>
-                        <SwiperSlide className='aspect-[32/9] bg-green-300 rounded-md p-4'>
+                        <SwiperSlide className='aspect-[16/9] md:aspect-[21/9] lg:aspect-[32/9] bg-green-300 rounded-md p-4'>
                             Slide 2
                         </SwiperSlide>
                     </Swiper>
                 </div>
             </div>
         </MaxWidthContainer>
-    )
-}
+    );
+};

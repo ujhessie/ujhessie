@@ -21,8 +21,8 @@ export const Botao: React.FC<iBotao> = ({
     const isExternal = rota.startsWith("http");
     const classeTipo = () => {
         return tipo === "padrao"
-            ? "bg-gradient-to-r from-vermelho to-rosa text-white px-8 py-3 rounded-md fonte-titulo font-bold uppercase inline-flex   itens-center justify-between flex items-center"
-            : "bg-cinza text-white px-8 py-3 rounded-md fonte-titulo font-bold uppercase  flex itens-center justify-between flex items-center";
+            ? " bg-gradient-to-r from-vermelho to-rosa text-white px-8 py-3 rounded-full fonte-titulo font-bold uppercase inline-flex   itens-center justify-between inline-flex items-center border border-zinc-800"
+            : "bg-zinc-950 border border-zinc-800 text-white px-8 py-3 rounded-full fonte-titulo font-bold uppercase  flex itens-center justify-between inline-flex items-center";
     };
 
     const content = (
@@ -47,7 +47,7 @@ export const Botao: React.FC<iBotao> = ({
     }
 
     return (
-        <Link href={rota} className={`${className} ${classeTipo()}`}>
+        <Link href={rota} className={`${classeTipo()} ${className} `}>
             {content}
         </Link>
     );

@@ -9,19 +9,23 @@ export const ProjetosSections = () => {
     return (
         <div>
             <MaxWidthContainer className='mb-8'>
-                <div id='div-projetos' className='projetos w-full h-full gap-4'>
+                <div
+                    id='div-projetos'
+                    className='w-full h-full gap-4 grid grid-cols-2 md:grid-cols-3'
+                >
                     {projetosVisiveis.map((projeto) => (
                         <CardProject key={projeto.id} id={projeto.id} />
                     ))}
                 </div>
-
-                <Botao
-                    icon={<IoIosArrowForward />}
-                    rota='/projetos'
-                    className='md:hidden reveal mb-4'
-                >
-                    Ver mais projetos
-                </Botao>
+                {/* <div className='flex justify-center'>
+                    <Botao
+                        icon={<IoIosArrowForward />}
+                        rota='/projetos'
+                        className='md:hidden reveal mb-4'
+                    >
+                        Ver mais projetos
+                    </Botao>
+                </div> */}
             </MaxWidthContainer>
         </div>
     );

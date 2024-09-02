@@ -24,7 +24,7 @@ export const Header = () => {
                         <TfiClose className='icon text-3xl' />
                     </div>
                     <Link href='/'onClick={fecharNav}>Página inicial</Link>
-                    {/* <Link href='#div-po' onClick={fecharNav}>Projetos</Link> */}
+                    <Link href='/projetos' onClick={fecharNav}>Projetos</Link>
                     {/* <Link href='/' onClick={fecharNav}>Sobre</Link>
                     <Link href='/' onClick={fecharNav}>Serviços</Link> */}
                 </div>

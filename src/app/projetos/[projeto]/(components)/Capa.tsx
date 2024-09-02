@@ -5,20 +5,7 @@ import { useEffect } from 'react';
 
 export const Capa: React.FC<{ capa: string,  status?: string }> = ({ capa, status }) => {
 
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-            import("scrollreveal").then((module) => {
-                const sr = module.default();
-                sr.reveal(".reveal", {
-                    origin: "bottom",
-                    distance: "20px",
-                    duration: 1000,
-                    reset: true,
-                    interval: 200,
-                });
-            });
-        }
-    }, []);
+
 
 
     return (
