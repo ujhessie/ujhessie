@@ -17,9 +17,10 @@ const CardProject: React.FC<{ id: number }> = ({ id }) => {
                 sr.reveal(".reveal", {
                     origin: "bottom",
                     distance: "20px",
-                    duration: 1000,
+                    duration: 500,
                     reset: false,
-                    interval: 300,
+                    interval: 200,
+                    
                 });
             });
         }
