@@ -14,9 +14,9 @@ export const HeroSection = () => {
             <div className='div-content-projetos-sec-inicio right-1/2  absolute       translate-x-1/2 w-full h-full  '>
                 <Bg_projetos />
             </div>
-            <MaxWidthContainer className=' pt-24 gap-4 lg:pt-32 lg:py-20 grid grid-cols-2'>
+            <MaxWidthContainer className=' pt-24 gap-4 lg:pt-32 lg:py-20 grid md:grid-cols-2'>
                 <Div_text />
-                <div className='imgs-projetos relative  bg-clip-content h-full w-full '></div>
+                {/* <div className='imgs-projetos relative  bg-clip-content h-full w-full '></div> */}
             </MaxWidthContainer>
         </section>
     );
