@@ -116,11 +116,12 @@ export const projetos: projeto[] = [
     {
         id: 7,
         titulo: "API para upload de arquivos",
-  
+
         links: {},
         tecnologias: ["Node js", "Multer", "Typescript", "Express"],
         imagens: {
-            imgCapa: "https://e0.pxfuel.com/wallpapers/86/808/desktop-wallpaper-js-node-js.jpg",
+            imgCapa:
+                "https://e0.pxfuel.com/wallpapers/86/808/desktop-wallpaper-js-node-js.jpg",
         },
         status: "Em desenvolvimento",
         tags: ["API", "Sistema"],
@@ -193,7 +194,8 @@ export const projetos: projeto[] = [
         links: {},
         tecnologias: ["Wordpress", "Elementor", "PHLOX", "CSS"],
         imagens: {
-            imgCapa: "https://th.bing.com/th/id/R.fe7d526dd46ca6ca108427ed7ed90285?rik=27Tz4oItHQL6pA&pid=ImgRaw&r=0",
+            imgCapa:
+                "https://th.bing.com/th/id/R.fe7d526dd46ca6ca108427ed7ed90285?rik=27Tz4oItHQL6pA&pid=ImgRaw&r=0",
         },
         status: "Em desenvolvimento",
         tags: ["API"],
