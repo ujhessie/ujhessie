@@ -12,7 +12,7 @@ const MaxWidthContainer: React.FC<MaxWidthContainerProps> = ({
     return (
         <div
             id={id}
-            className={`max-w-[1400px] mx-auto px-4 relative ${className} `}
+            className={`max-w-[1400px] mx-auto p-4 lg:px-8  relative ${className} `}
         >
             {children}
         </div>

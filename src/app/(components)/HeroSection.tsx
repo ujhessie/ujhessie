@@ -10,11 +10,12 @@ import { useMemo } from "react";
 
 export const HeroSection = () => {
     return (
-        <section className=' relative  overflow-hidden'>
-            <div className='div-content-projetos-sec-inicio right-1/2  absolute       translate-x-1/2 w-full h-full  '>
+        <section className=' relative  overflow-hidden -mt-[230px] '>
+            <div className='div-content-projetos-sec-inicio right-1/2  absolute translate-x-1/2 w-full h-full  '>
                 <Bg_projetos />
             </div>
-            <MaxWidthContainer className=' pt-24 gap-4 lg:pt-32 lg:py-20 grid md:grid-cols-2'>
+            <div className='absolute w-full h-full left-0 top-0 bg-gradient-to-r from-preto-escuro/50 to-transparent'></div>
+            <MaxWidthContainer className=' py-32 pt-[330px]  gap-4 grid '>
                 <Div_text />
                 {/* <div className='imgs-projetos relative  bg-clip-content h-full w-full '></div> */}
             </MaxWidthContainer>
@@ -58,7 +59,7 @@ const Div_text = () => {
             <span className='bg-gradient-principal inline-block text-3xl  md:text-5xl lg:text-6xl font-titulo -mt-2  bg-clip-text text-transparent'>
                 Desenvolvedor & designer
             </span>
-            <p className='text-azul-acinzentado '>
+            <p className='text-azul-acinzentado lg:w-[60%]'>
                 É muito bom te ver por aqui. Fique a vontade e
                 <strong>explore meus projetos</strong> e um pouco
                 <strong>sobre mim</strong>. Qualquer dúvida é só entrar em
@@ -103,7 +104,7 @@ const Bg_projetos = () => {
                 {shuffledImages.map((image, index) => (
                     <img
                         key={`${className}-${index}`}
-                        className='block  aspect-[4/3] object-cover opacity-75'
+                        className='block w-full h-full  aspect-[4/3] object-cover opacity-75'
                         src={image}
                         alt={`Imagem ${index + 1}`}
                     />
@@ -113,7 +114,7 @@ const Bg_projetos = () => {
     };
 
     return (
-        <div className='div-imgs h-full absolute  w-full left-1/2 -translate-x-1/2 flex flex-col gap-2  -z-20 -rotate-[35deg] scale-150'>
+        <div className='div-imgs h-full absolute  w-1/2 left-1/2 -translate-x-1/5 flex flex-col gap-2  -z-20 -rotate-[35deg] scale-100'>
             {renderImageRow("left")}
             {renderImageRow("right")}
             {renderImageRow("left")}

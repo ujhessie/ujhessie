@@ -10,9 +10,9 @@ export const Botoes = () => {
         <div className='botoes z-20 flex gap-4'>
             <Link
                 href='#div-projetos'
-                className='hidden md:block rounded-full text-white bg-gradient-principal text-base font-corpo p-[3px]'
+                className='hidden md:block rounded-full text-white bg-gradient-principal text-base font-corpo p-[3px] '
             >
-                <div className='content py-3 px-8 bg-preto-escuro rounded-full'>
+                <div className='content   py-3 px-8 bg-preto-escuro rounded-full'>
                     Ver Projetos
                 </div>
             </Link>

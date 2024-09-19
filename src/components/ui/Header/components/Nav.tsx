@@ -7,27 +7,51 @@ export const Nav = () => {
     }
 
     return (
-        <nav className='nav-header bg-preto-claro text-branco  lg:pt-6 py-6 px-16 border border-azul-escuro-fosco md:rounded-full font-corpo'>
-            <div className='content gap-6'>
+        <nav className='nav-header bg-preto-claro text-branco  lg:pt-4 py-4 px-16 border border-azul-escuro-fosco md:rounded-full font-corpo'>
+            <div className='content gap-4'>
                 <div className='div-close md:hidden' onClick={fecharNav}>
                     <TfiClose className='icon text-3xl' />
                 </div>
-                <Link href='/' onClick={fecharNav}>
+                <Link
+                    className='hover:bg-gradient-principal hover:bg-clip-text hover:text-transparent my-transition hover:scale-110 p-2'
+                    href='/'
+                    onClick={fecharNav}
+                >
                     Início
                 </Link>
-                <Link href='/' onClick={fecharNav}>
+                <Link
+                    className='hover:bg-gradient-principal hover:bg-clip-text hover:text-transparent my-transition hover:scale-110 p-2'
+                    href='/'
+                    onClick={fecharNav}
+                >
                     Destaques
                 </Link>
-                <Link href='/' onClick={fecharNav}>
+                <Link
+                    className='hover:bg-gradient-principal hover:bg-clip-text hover:text-transparent my-transition hover:scale-110 p-2'
+                    href='/'
+                    onClick={fecharNav}
+                >
                     Sobre
                 </Link>
-                <Link href='/projetos' onClick={fecharNav}>
+                <Link
+                    className='hover:bg-gradient-principal hover:bg-clip-text hover:text-transparent my-transition hover:scale-110 p-2'
+                    href='/projetos'
+                    onClick={fecharNav}
+                >
                     Projetos
                 </Link>
-                <Link href='/' onClick={fecharNav}>
+                <Link
+                    className='hover:bg-gradient-principal hover:bg-clip-text hover:text-transparent my-transition hover:scale-110 p-2'
+                    href='/'
+                    onClick={fecharNav}
+                >
                     Serviços
                 </Link>
-                <Link href='/' onClick={fecharNav}>
+                <Link
+                    className='hover:bg-gradient-principal hover:bg-clip-text hover:text-transparent my-transition hover:scale-110 p-2'
+                    href='/'
+                    onClick={fecharNav}
+                >
                     Contatos
                 </Link>
             </div>
