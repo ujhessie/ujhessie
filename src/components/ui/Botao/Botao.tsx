@@ -44,7 +44,7 @@ export const Botao: React.FC<iBotao> = ({
                 href={rota}
                 className={` ${
                     tipo === "padrao"
-                        ? "bg-gradient-principal p-2 rounded-full"
+                        ? "bg-gradient-principal p-[3px] rounded-full"
                         : ""
                 } ${className} `}
                 target='_blank'
@@ -68,8 +68,8 @@ export const Botao: React.FC<iBotao> = ({
             href={rota}
             className={`${
                 tipo === "padrao"
-                    ? "bg-gradient-principal  inline-block p-1 rounded-full"
-                    : "bg-gradient-principal  inline-block p-1 rounded-full"
+                    ? "bg-gradient-principal  inline-block p-[3px] rounded-full"
+                    : "bg-gradient-principal  inline-block p-[3px] rounded-full"
             } ${className} `}
         >
             <div

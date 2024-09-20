@@ -4,8 +4,8 @@ import MaxWidthContainer from "@/components/ui/MaxWidthContainer";
 /* eslint-disable @next/next/no-img-element */
 export const ContactSection = () => {
     return (
-        <MaxWidthContainer className='text-center  reveal mb-4'>
+        <section className='py-16'>
             <BannerContato />
-        </MaxWidthContainer>
+        </section>
     );
 };

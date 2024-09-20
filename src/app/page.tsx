@@ -1,10 +1,15 @@
 "use client";
 
-import { useEffect } from 'react';
-import { ContactSection, HeroSection, ProjectsSection, Destaques, AboutSection } from "./(components)";
+import { useEffect } from "react";
+import {
+    ContactSection,
+    HeroSection,
+    ProjectsSection,
+    Destaques,
+    AboutSection,
+} from "./(components)";
 
 export default function Home() {
-
     useEffect(() => {
         if (typeof window !== "undefined") {
             import("scrollreveal").then((module) => {
@@ -20,13 +25,11 @@ export default function Home() {
         }
     }, []);
 
-    
     return (
         <>
-        
             <HeroSection />
-            <Destaques/>
-            <AboutSection/>
+            {/* <Destaques/> */}
+            <AboutSection />
             <ProjectsSection />
             <ContactSection />
         </>

@@ -7,6 +7,7 @@ import { Github, Instagram, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import { useProjetos } from "@/contexts/ProjetosContexts";
 import { useMemo } from "react";
+import { SubtituloTop } from "@/components/ui/Subtitulotop/SubtituloTop";
 
 export const HeroSection = () => {
     return (
@@ -24,17 +25,6 @@ export const HeroSection = () => {
 };
 
 const Div_text = () => {
-    const Subtitulo_top = () => {
-        return (
-            <div className='subtitulo flex gap-2  items-center'>
-                <div className='circle w-3 h-3 bg-gradient-principal rounded-full'></div>
-                <p className='inline-block text-base text-azul-acinzentado'>
-                    Olá! Bem vindos!
-                </p>
-            </div>
-        );
-    };
-
     const IconRedeSocial = ({
         icon,
         url = "#",
@@ -54,15 +44,15 @@ const Div_text = () => {
 
     return (
         <div className='text-white flex flex-col justify-start gap-2 '>
-            <Subtitulo_top />
+            <SubtituloTop>Olá! Bem vindos!</SubtituloTop>
             <h1 className='m-0 leading-none'>jesse rodrigues</h1>
             <span className='bg-gradient-principal inline-block text-3xl  md:text-5xl lg:text-6xl font-titulo -mt-2  bg-clip-text text-transparent'>
                 Desenvolvedor & designer
             </span>
             <p className='text-azul-acinzentado lg:w-[60%]'>
                 É muito bom te ver por aqui. Fique a vontade e
-                <strong>explore meus projetos</strong> e um pouco
-                <strong>sobre mim</strong>. Qualquer dúvida é só entrar em
+                <strong> explore meus projetos</strong> e um pouco
+                <strong> sobre mim</strong>. Qualquer dúvida é só entrar em
                 contato comigo.
             </p>
             <div className='div-botoes flex gap-2'>
@@ -70,10 +60,22 @@ const Div_text = () => {
                 <Botao tipo='transparente'>Sobre Mim</Botao>
             </div>
             <div className='icons-redes-sociais flex gap-1'>
-                <IconRedeSocial icon={<Github className=' w-10 h-full' />} />
-                <IconRedeSocial icon={<Instagram className=' w-10 h-full' />} />
-                <IconRedeSocial icon={<Linkedin className=' w-10 h-full' />} />
-                <IconRedeSocial icon={<Mail className=' w-10 h-full' />} />
+                <IconRedeSocial
+                    url='https://github.com/ujhessie/'
+                    icon={<Github className=' w-10 h-full' />}
+                />
+                <IconRedeSocial
+                    url='https://www.instagram.com/ujhessie/'
+                    icon={<Instagram className=' w-10 h-full' />}
+                />
+                <IconRedeSocial
+                    url='https://www.linkedin.com/in/jesserodrigues4502/'
+                    icon={<Linkedin className=' w-10 h-full' />}
+                />
+                <IconRedeSocial
+                    url='mailto:juniorrodrigues4502@gmail.com'
+                    icon={<Mail className=' w-10 h-full' />}
+                />
             </div>
         </div>
     );
