@@ -1,5 +1,6 @@
 import { TfiClose } from "react-icons/tfi";
 import Link from "next/link";
+import MaxWidthContainer from "../../MaxWidthContainer";
 
 export const Nav = () => {
     function fecharNav() {
@@ -7,11 +8,17 @@ export const Nav = () => {
     }
 
     return (
-        <nav className='nav-header bg-preto-claro text-branco  lg:pt-4 py-4 px-16 border border-azul-escuro-fosco md:rounded-full font-corpo'>
+        <nav className='nav-header bg-preto-claro text-branco   py-4 px-16 border border-azul-escuro-fosco md:rounded-full font-corpo'>
             <div className='content gap-4'>
-                <div className='div-close md:hidden' onClick={fecharNav}>
-                    <TfiClose className='icon text-3xl' />
-                </div>
+                <MaxWidthContainer className='realtive  w-full justify-end px-0 py-4 flex md:hidden     '>
+                    <div
+                        className='div-closemd:hidden inline-flex bg:preto-claro justify-end items-center'
+                        onClick={fecharNav}
+                    >
+                        <TfiClose className='icon text-3xl' />
+                    </div>
+                </MaxWidthContainer>
+
                 <Link
                     className='hover:bg-gradient-principal hover:bg-clip-text hover:text-transparent my-transition hover:scale-110 p-2'
                     href='/'
@@ -19,16 +26,16 @@ export const Nav = () => {
                 >
                     Início
                 </Link>
-                <Link
+                {/* <Link
                     className='hover:bg-gradient-principal hover:bg-clip-text hover:text-transparent my-transition hover:scale-110 p-2'
                     href='/'
                     onClick={fecharNav}
                 >
                     Destaques
-                </Link>
+                </Link> */}
                 <Link
                     className='hover:bg-gradient-principal hover:bg-clip-text hover:text-transparent my-transition hover:scale-110 p-2'
-                    href='/'
+                    href='/#sec-sobre'
                     onClick={fecharNav}
                 >
                     Sobre
@@ -40,16 +47,16 @@ export const Nav = () => {
                 >
                     Projetos
                 </Link>
-                <Link
+                {/* <Link
                     className='hover:bg-gradient-principal hover:bg-clip-text hover:text-transparent my-transition hover:scale-110 p-2'
                     href='/'
                     onClick={fecharNav}
                 >
                     Serviços
-                </Link>
+                </Link> */}
                 <Link
                     className='hover:bg-gradient-principal hover:bg-clip-text hover:text-transparent my-transition hover:scale-110 p-2'
-                    href='/'
+                    href='/#sec-contatos'
                     onClick={fecharNav}
                 >
                     Contatos

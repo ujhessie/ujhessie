@@ -38,14 +38,16 @@ export const ProjectsSection = () => {
     return (
         <section className='py-16 bg-gradient-to-b  from-preto-claro to-transparent'>
             <MaxWidthContainer className=''>
-                <div className='header-projetos flex justify-between items-end mb-4'>
-                    <div className='flex flex-col gap-4'>
-                        <SubtituloTop>Projetos</SubtituloTop>
-                        <h2 className='text-white'>
+                <div className='header-projetos flex md:justify-between justify-center  items-end mb-4'>
+                    <div className='flex flex-col justify-center items-center md:items-start md:justify-start text-center md:tex-start gap-4'>
+                        <div className='flex justify-center md:justify-start'>
+                            <SubtituloTop>Projetos</SubtituloTop>
+                        </div>
+                        <h2 className='text-white text-center md:text-start'>
                             Veja alguns dos meus <span>projetos</span>
                         </h2>
                     </div>
-                    <div>
+                    <div className=''>
                         <Botao
                             tipo='transparente'
                             rota='/projetos'
@@ -64,7 +66,7 @@ export const ProjectsSection = () => {
                     ))}
                 </div>
 
-                <div className='flex justify-start text-white'>
+                <div className='flex justify-center md:justify-start  text-white'>
                     <Botao rota='/projetos' className='reveal md:hidden  mb-4'>
                         Ver todos os projetos
                     </Botao>

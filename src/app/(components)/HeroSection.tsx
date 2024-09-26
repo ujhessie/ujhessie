@@ -43,23 +43,23 @@ const Div_text = () => {
     };
 
     return (
-        <div className='text-white flex flex-col justify-start gap-2 '>
-            <SubtituloTop>Olá! Bem vindos!</SubtituloTop>
+        <div className='text-white flex flex-col md:justify-start gap-2 justify-center text-center md:text-start '>
+            <div className='text-center md:text-start'><SubtituloTop>Olá! Bem vindos!</SubtituloTop></div>
             <h1 className='m-0 leading-none'>jesse rodrigues</h1>
-            <span className='bg-gradient-principal inline-block text-3xl  md:text-5xl lg:text-6xl font-titulo -mt-2  bg-clip-text text-transparent'>
+            <div><span className='bg-gradient-principal inline-block text-3xl  md:text-5xl lg:text-6xl font-titulo -mt-2  bg-clip-text text-transparent'>
                 Desenvolvedor & designer
-            </span>
+            </span></div>
             <p className='text-azul-acinzentado lg:w-[60%]'>
                 É muito bom te ver por aqui. Fique a vontade e
                 <strong> explore meus projetos</strong> e um pouco
                 <strong> sobre mim</strong>. Qualquer dúvida é só entrar em
                 contato comigo.
             </p>
-            <div className='div-botoes flex gap-2'>
+            <div className='div-botoes flex gap-2 justify-center md:justify-start'>
                 <Botao>Ver Projetos</Botao>
                 <Botao tipo='transparente'>Sobre Mim</Botao>
             </div>
-            <div className='icons-redes-sociais flex gap-1'>
+            <div className='icons-redes-sociais flex gap-1 justify-center md:justify-start'>
                 <IconRedeSocial
                     url='https://github.com/ujhessie/'
                     icon={<Github className=' w-10 h-full' />}

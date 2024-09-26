@@ -294,4 +294,19 @@ export const projetos: projeto[] = [
         status: "Concluído",
         tags: ["Design"],
     },
+    {
+        id:18,
+        titulo: "Sistema de imobiliária em Wordpress",
+        desc:"Sistema de imobiliária com duncionalidades esssenciais como: Cadastro e edição de imóvel, Páginas dos imóveis com informaçõs dinâmicas e outros. O sistema foi feito utilizando, principalmente, os plugins Jet Engine e Jet Smart Filters, podendo ser escalado para um projeto ainda maior.",
+        status:"Concluído",
+        tecnologias: ["Wordoprss", "Elementor pro", "Jet Engine", "Jet Smart Filters"], 
+        tags: ["Site", "Sistema", 'API'],
+        links: {
+            linkVisitarProjeto: "https://imobiliariarealizeimoveis.com.br/",
+        },
+        imagens: {
+            imgCapa: "/images/projetos/18/capa.png",
+            imgsProjeto: ["/images/projetos/18/1.png", "/images/projetos/18/2.png", "/images/projetos/18/3.png", "/images/projetos/18/4.png"],
+        },
+    }
 ];
