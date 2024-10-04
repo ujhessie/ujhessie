@@ -330,7 +330,7 @@ export const projetos: projeto[] = [
         ],
         tags: ["IA", "Sistema", "API"],
         links: {
-            linkVisitarProjeto: "https://imobiliariarealizeimoveis.com.br/",
+           
         },
         imagens: {
             imgCapa: "https://img.freepik.com/free-vector/cute-friendly-robot-with-welcome-speech-bubble_107791-29910.jpg?t=st=1728044050~exp=1728047650~hmac=6fea3f8d3c9de3437227c0a122e04ca5e68adb8a2e79f4e03106068f3c601d33&w=996",
@@ -341,5 +341,30 @@ export const projetos: projeto[] = [
             //     "/images/projetos/18/4.png",
             // ],
         },
+        
+    },
+    {
+        id: 20,
+        titulo: "Web iNexus - Landingpage Agência de sites",
+        desc: "",
+        status: "Em desenvolvimento",
+        tecnologias: [
+            "React Js",
+            "Taiwind CSS"
+        ],
+        tags: ["Site", "Sistema", "API"],
+        links: {
+         
+        },
+        imagens: {
+            imgCapa: "/images/projetos/20/capa.png",
+            // imgsProjeto: [
+            //     "/images/projetos/18/1.png",
+            //     "/images/projetos/18/2.png",
+            //     "/images/projetos/18/3.png",
+            //     "/images/projetos/18/4.png",
+            // ],
+        },
+        
     },
 ];

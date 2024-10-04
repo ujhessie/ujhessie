@@ -5,7 +5,7 @@ import { projetos } from "@/data/projetos";
 import CardProject from "../CardProject/CardProject";
 
 // Definindo um tipo específico para as tags
-type Tag = "Site" | "Design" | "Sistema" | "API" | null;
+type Tag = "Site" | "Design" | "Sistema" | "API" | "IA" | null;
 
 export const Projetos = () => {
     const [filtro, setFiltro] = useState<Tag>(null);
@@ -44,7 +44,7 @@ const TagsProjetos = memo(
         aplicarFiltro: (tag: Tag) => void;
         filtro: Tag;
     }) => {
-        const tags: Tag[] = ["Site", "Design", "Sistema", "API"]; // Adicione ou remova tags conforme necessário
+        const tags: Tag[] = ["Site", "Design", "Sistema", "API", "IA"]; // Adicione ou remova tags conforme necessário
 
         const TagButton = ({ tag }: { tag: Tag }) => {
             const isSelected = filtro === tag;
