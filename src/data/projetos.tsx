@@ -14,7 +14,7 @@ export interface projeto {
     };
     tecnologias?: string[];
     status?: "A desenvolver" | "Em desenvolvimento" | "Concluído";
-    tags?: ("Site" | "Design" | "Sistema" | "API")[];
+    tags?: ("Site" | "Design" | "Sistema" | "API" | "IA")[];
 }
 
 export const projetos: projeto[] = [
@@ -295,18 +295,51 @@ export const projetos: projeto[] = [
         tags: ["Design"],
     },
     {
-        id:18,
+        id: 18,
         titulo: "Sistema de imobiliária em Wordpress",
-        desc:"Sistema de imobiliária com duncionalidades esssenciais como: Cadastro e edição de imóvel, Páginas dos imóveis com informaçõs dinâmicas e outros. O sistema foi feito utilizando, principalmente, os plugins Jet Engine e Jet Smart Filters, podendo ser escalado para um projeto ainda maior.",
-        status:"Concluído",
-        tecnologias: ["Wordoprss", "Elementor pro", "Jet Engine", "Jet Smart Filters"], 
-        tags: ["Site", "Sistema", 'API'],
+        desc: "Sistema de imobiliária com duncionalidades esssenciais como: Cadastro e edição de imóvel, Páginas dos imóveis com informaçõs dinâmicas e outros. O sistema foi feito utilizando, principalmente, os plugins Jet Engine e Jet Smart Filters, podendo ser escalado para um projeto ainda maior.",
+        status: "Concluído",
+        tecnologias: [
+            "Wordoprss",
+            "Elementor pro",
+            "Jet Engine",
+            "Jet Smart Filters",
+        ],
+        tags: ["Site", "Sistema", "API"],
         links: {
             linkVisitarProjeto: "https://imobiliariarealizeimoveis.com.br/",
         },
         imagens: {
             imgCapa: "/images/projetos/18/capa.png",
-            imgsProjeto: ["/images/projetos/18/1.png", "/images/projetos/18/2.png", "/images/projetos/18/3.png", "/images/projetos/18/4.png"],
+            imgsProjeto: [
+                "/images/projetos/18/1.png",
+                "/images/projetos/18/2.png",
+                "/images/projetos/18/3.png",
+                "/images/projetos/18/4.png",
+            ],
         },
-    }
+    },
+    {
+        id: 19,
+        titulo: "ChatBot para Startup de Jogos",
+        desc: "Chat onnline e em tempo real utilizando IA e uma base de dados dos produtos da empresa.",
+        status: "Em desenvolvimento",
+        tecnologias: [
+            "ChatGPT",
+            "Node JS"
+        ],
+        tags: ["IA", "Sistema", "API"],
+        links: {
+            linkVisitarProjeto: "https://imobiliariarealizeimoveis.com.br/",
+        },
+        imagens: {
+            imgCapa: "https://img.freepik.com/free-vector/cute-friendly-robot-with-welcome-speech-bubble_107791-29910.jpg?t=st=1728044050~exp=1728047650~hmac=6fea3f8d3c9de3437227c0a122e04ca5e68adb8a2e79f4e03106068f3c601d33&w=996",
+            // imgsProjeto: [
+            //     "/images/projetos/18/1.png",
+            //     "/images/projetos/18/2.png",
+            //     "/images/projetos/18/3.png",
+            //     "/images/projetos/18/4.png",
+            // ],
+        },
+    },
 ];
