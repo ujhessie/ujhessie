@@ -15,27 +15,32 @@ nav {
         position: absolute;
         right: 30px;
         top: 50px;
+  
         cursor: pointer;
-        /* display: none; */
-
-        /* .icon {
-        } */
     }
 }
 
 @media (max-width: 768px) {
     nav {
-        display: none;
+
+        transition: all 200ms ease-in-out;
+
+
+        /* display: none; */
+
+
         position: fixed;
-        left: 0;
+        left: -100vw;
         top: 0;
         width: 100vw;
         height: 100vh;
         overflow: hidden;
+        opacity: 0;
         background-color: #151821;
 
         &.nav-ativa {
-            display: block;
+            left: 0;
+            opacity: 1;
         }
 
         border-radius: 0;

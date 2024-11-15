@@ -6,7 +6,7 @@ import { Botao } from "@/components/ui/Botao/Botao";
 import { Github, Instagram, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import { useProjetos } from "@/contexts/ProjetosContexts";
-import { useMemo } from "react";
+import {  useMemo } from "react";
 import { SubtituloTop } from "@/components/ui/Subtitulotop/SubtituloTop";
 
 export const HeroSection = () => {
@@ -52,39 +52,31 @@ const Div_text = () => {
 const Bg_projetos = () => {
     const { projetos } = useProjetos();
 
-    // Função para embaralhar um array
-    const shuffleArray = (array: string[]) => {
-        return array.sort(() => Math.random() - 0.5);
-    };
-
-    // Mapeia e filtra para garantir que todas as imagens sejam strings válidas e já aplica o shuffle
+    // Filtra as imagens de capa dos projetos
     const images: string[] = useMemo(() => {
         return projetos
             .map((projeto) => projeto.imagens.imgCapa)
             .filter((img): img is string => img !== undefined);
     }, [projetos]);
 
-    // Função para gerar uma linha de imagens embaralhadas
-    const renderImageRow = (className: string) => {
-        const shuffledImages = shuffleArray([...images]); // Gera uma nova ordem aleatória para cada linha
-        return (
-            <div
-                className={`row-image ${className} flex justify-center w-full h-1/3 gap-2`}
-            >
-                {shuffledImages.map((image, index) => (
-                    <img
-                        key={`${className}-${index}`}
-                        className='block w-full h-full  aspect-[4/3] object-cover opacity-75'
-                        src={image}
-                        alt={`Imagem ${index + 1}`}
-                    />
-                ))}
-            </div>
-        );
-    };
+    // Renderiza uma linha de imagens
+    const renderImageRow = (className: string) => (
+        <div
+            className={`row-image ${className} flex justify-center w-full h-1/3 gap-2`}
+        >
+            {images.map((image, index) => (
+                <img
+                    key={`${className}-${index}`}
+                    className='block w-full h-full aspect-[4/3] object-cover opacity-75'
+                    src={image}
+                    alt={`Imagem ${index + 1}`}
+                />
+            ))}
+        </div>
+    );
 
     return (
-        <div className='div-imgs h-full absolute  w-1/2 left-1/2 -translate-x-1/5 flex flex-col gap-2  -z-20 -rotate-[35deg] scale-100'>
+        <div className='div-imgs h-full absolute w-1/2 left-1/2 -translate-x-1/5 flex flex-col gap-2 -z-20 -rotate-[35deg] scale-100'>
             {renderImageRow("left")}
             {renderImageRow("right")}
             {renderImageRow("left")}
