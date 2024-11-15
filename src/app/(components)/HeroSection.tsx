@@ -16,67 +16,35 @@ export const HeroSection = () => {
                 <Bg_projetos />
             </div>
             <div className='absolute w-full h-full left-0 top-0 bg-gradient-to-r from-preto-escuro/50 to-transparent'></div>
-            <MaxWidthContainer className=' py-32 pt-[330px]  gap-4 grid '>
+            <MaxWidthContainer className=' py-32 pt-[330px]  gap-4 grid lg:grid-cols-4'>
                 <Div_text />
-                {/* <div className='imgs-projetos relative  bg-clip-content h-full w-full '></div> */}
+                <div className='text-white w-full h-full lg:col-span-1'>
+                    <RedesSociais />
+                </div>
             </MaxWidthContainer>
         </section>
     );
 };
 
 const Div_text = () => {
-    const IconRedeSocial = ({
-        icon,
-        url = "#",
-    }: {
-        icon: React.ReactNode;
-        url?: string;
-    }) => {
-        return (
-            <Link
-                className='p-3 my-transition bg-gradient-principal/10 hover:bg-gradient-principal hover:scale-110 rounded-full '
-                href={url}
-            >
-                {icon}
-            </Link>
-        );
-    };
-
     return (
-        <div className='text-white flex flex-col md:justify-start gap-2 justify-center text-center md:text-start '>
-            <div className='text-center md:text-start'><SubtituloTop>Olá! Bem vindos!</SubtituloTop></div>
+        <div className='text-white flex flex-col md:justify-start gap-2 justify-center text-center md:text-start lg:col-span-3'>
+            <div className='text-center md:text-start'>
+                <SubtituloTop>Olá! Bem vindos!</SubtituloTop>
+            </div>
             <h1 className='m-0 leading-none'>jesse rodrigues</h1>
-            <div><span className='bg-gradient-principal inline-block text-3xl  md:text-5xl lg:text-6xl font-titulo -mt-2  bg-clip-text text-transparent'>
-                Desenvolvedor & designer
-            </span></div>
+            <div>
+                <span className='bg-gradient-principal inline-block text-3xl  md:text-5xl lg:text-6xl font-titulo -mt-2  bg-clip-text text-transparent'>
+                    Desenvolvedor & designer
+                </span>
+            </div>
             <p className='text-azul-acinzentado lg:w-[60%]'>
                 É muito bom te ver por aqui. Fique a vontade e
                 <strong> explore meus projetos</strong> e um pouco
                 <strong> sobre mim</strong>. Qualquer dúvida é só entrar em
                 contato comigo.
             </p>
-            <div className='div-botoes flex gap-2 justify-center md:justify-start'>
-                <Botao>Ver Projetos</Botao>
-                <Botao tipo='transparente'>Sobre Mim</Botao>
-            </div>
-            <div className='icons-redes-sociais flex gap-1 justify-center md:justify-start'>
-                <IconRedeSocial
-                    url='https://github.com/ujhessie/'
-                    icon={<Github className=' w-10 h-full' />}
-                />
-                <IconRedeSocial
-                    url='https://www.instagram.com/ujhessie/'
-                    icon={<Instagram className=' w-10 h-full' />}
-                />
-                <IconRedeSocial
-                    url='https://www.linkedin.com/in/jesserodrigues4502/'
-                    icon={<Linkedin className=' w-10 h-full' />}
-                />
-                <IconRedeSocial
-                    url='mailto:juniorrodrigues4502@gmail.com'
-                    icon={<Mail className=' w-10 h-full' />}
-                />
-            </div>
+            <Botoes />
         </div>
     );
 };
@@ -120,6 +88,57 @@ const Bg_projetos = () => {
             {renderImageRow("left")}
             {renderImageRow("right")}
             {renderImageRow("left")}
+        </div>
+    );
+};
+
+const RedesSociais = () => {
+    const IconRedeSocial = ({
+        icon,
+        url = "#",
+    }: {
+        icon: React.ReactNode;
+        url?: string;
+    }) => {
+        return (
+            <Link
+                className='p-3 my-transition bg-gradient-principal/10 bg-gradient-principal hover:scale-110 rounded-full shadow-xl  '
+                href={url}
+            >
+                {icon}
+            </Link>
+        );
+    };
+
+    return (
+        <div className='icons-redes-sociais flex gap-4  items-end  md:flex-col justify-center h-full '>
+            <IconRedeSocial
+                url='https://github.com/ujhessie/'
+                icon={<Github className=' w-8 h-full' />}
+            />
+            <IconRedeSocial
+                url='https://www.instagram.com/ujhessie/'
+                icon={<Instagram className=' w-8 h-full' />}
+            />
+            <IconRedeSocial
+                url='https://www.linkedin.com/in/jesserodrigues4502/'
+                icon={<Linkedin className=' w-8 h-full' />}
+            />
+            <IconRedeSocial
+                url='mailto:juniorrodrigues4502@gmail.com'
+                icon={<Mail className=' w-8 h-full' />}
+            />
+        </div>
+    );
+};
+
+const Botoes = () => {
+    return (
+        <div className='div-botoes flex gap-4 justify-center flex-col md:flex-row md:justify-start'>
+            <Botao rota='/#sec-sobre-mim'>Ver mais sobre mim</Botao>
+            <Botao rota='/projetos' tipo='secundario'>
+                Meus projetos
+            </Botao>
         </div>
     );
 };

@@ -47,11 +47,11 @@ export const ProjectsSection = () => {
                             Veja alguns dos meus <span>projetos</span>
                         </h2>
                     </div>
-                    <div className=''>
+                    <div className='text-white'>
                         <Botao
-                            tipo='transparente'
+                            tipo='secundario'
                             rota='/projetos'
-                            className='reveal items-center   hidden md:block mb-4 text-white'
+                            
                         >
                             Ver mais projetos
                         </Botao>

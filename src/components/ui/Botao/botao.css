@@ -13,3 +13,12 @@
     border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
     border-image: 20px;
 }
+
+.botao-container {
+    &:hover {
+        @apply  scale-[1.05] transition-[200ms] ;
+        .botao-content {
+            @apply bg-transparent transition-[200ms];
+        }
+    }
+}

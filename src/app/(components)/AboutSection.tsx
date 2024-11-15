@@ -5,7 +5,7 @@ import { SubtituloTop } from "@/components/ui/Subtitulotop/SubtituloTop";
 
 export const AboutSection = () => {
     return (
-        <section id='sec-sobre' className='py-32' >
+        <section id='sec-sobre-mim' className='py-32' >
             <MaxWidthContainer>
                 <Slide1 />
             </MaxWidthContainer>
@@ -143,7 +143,7 @@ const Slide1 = () => {
                 <Botao
                     rota='/projetos'
                     className='text-white'
-                    tipo='transparente'
+                    tipo='secundario'
                 >
                     Meus projetos
                 </Botao>
@@ -152,33 +152,3 @@ const Slide1 = () => {
     );
 };
 
-const Slide2 = () => {
-    return (
-        <div className='grid grid-cols-3   items-center bg-preto-claro p-16 rounded-2xl shadow-xl gap-8 '>
-            <div className='text flex flex-col items-start gap-2 col-span-2'>
-                <SubtituloTop>Sobre</SubtituloTop>
-                <h2 className='text-white'>
-                    Algumas das principais{" "}
-                    <span className='bg-gradient-principal bg-clip-text text-transparent'>
-                        tecnologias
-                    </span>{" "}
-                    que utilizo
-                </h2>
-
-                <Botao className='text-white' tipo='transparente'>
-                    Meus projetos
-                </Botao>
-            </div>
-            <div className='img relative col-span-1  rounded-full   w-full h-full'>
-                <div className='div-bg absolute -translate-x-2 translate-y-2  z-10 top-0 left-0 rounded-full  bg-white w-full'></div>
-                <div className='relative'>
-                    <img
-                        className='z-20  w-full h-full top-0 left-0 object-cover'
-                        src='https://avatars.githubusercontent.com/u/98673779?v=4'
-                        alt=''
-                    />
-                </div>
-            </div>
-        </div>
-    );
-};

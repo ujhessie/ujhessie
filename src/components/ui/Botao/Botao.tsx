@@ -1,17 +1,21 @@
+"use client";
+
 import Link from "next/link";
 import "./botao.css";
 
 interface iBotao {
     className?: string;
+    classNameContainer?: string;
     children: React.ReactNode;
     rota?: string;
-    tipo?: "padrao" | "transparente";
+    tipo?: "padrao" | "secundario" | "terciario";
     icon?: React.ReactNode;
     iconPosition?: "left" | "right";
 }
 
 export const Botao: React.FC<iBotao> = ({
     className,
+    classNameContainer,
     children,
     rota = "#",
     tipo = "padrao",
@@ -20,11 +24,11 @@ export const Botao: React.FC<iBotao> = ({
 }) => {
     const isExternal = rota.startsWith("http");
 
-    // const classeTipo = () => {
-    //     return tipo === "padrao"
-    //         ? " bg-gradient-to-r from-vermelho to-rosa text-white px-8 py-3 rounded-full fonte-titulo font-bold uppercase inline-flex   itens-center justify-between inline-flex items-center border border-zinc-800"
-    //         : "bg-zinc-950 border border-zinc-800 text-white px-8 py-3 rounded-full fonte-titulo font-bold uppercase  flex itens-center justify-between inline-flex items-center";
-    // };
+    const classContainer = `botao-container my-transition bg-gradient-principal p-1 md:p-1.3 rounded-full flex items-center ${classNameContainer}`;
+
+    const classContent = `botao-content my-transition px-6 py-3 rounded-full text-[18px] font-semibold w-full  ${
+        tipo === "secundario" ? "  bg-preto-escuro " : null
+    }  ${className}`;
 
     const content = (
         <>
@@ -42,45 +46,18 @@ export const Botao: React.FC<iBotao> = ({
         return (
             <a
                 href={rota}
-                className={` ${
-                    tipo === "padrao"
-                        ? "bg-gradient-principal p-[3px] rounded-full"
-                        : ""
-                } ${className} `}
+                className={` ${classContainer}`}
                 target='_blank'
                 rel='noopener noreferrer'
             >
-                <div
-                    className={`${
-                        tipo === "padrao"
-                            ? "p-2 bg-preto-escuro rounded-full"
-                            : ""
-                    }`}
-                >
-                    {content}
-                </div>
+                <div className={`${classContent} ${className}`}>{content}</div>
             </a>
         );
     }
 
     return (
-        <Link
-            href={rota}
-            className={`${
-                tipo === "padrao"
-                    ? "bg-gradient-principal  inline-block p-[3px] rounded-full"
-                    : "bg-gradient-principal  inline-block p-[3px] rounded-full"
-            } ${className} `}
-        >
-            <div
-                className={`${
-                    tipo === "padrao"
-                        ? "px-8 py-3 bg-gradient-principal rounded-full flex"
-                        : "px-8 py-3 bg-preto-escuro rounded-full flex"
-                }`}
-            >
-                {content}
-            </div>
+        <Link href={rota} className={classContainer}>
+            <div className={`${classContent} ${className}`}>{content}</div>
         </Link>
     );
 };
