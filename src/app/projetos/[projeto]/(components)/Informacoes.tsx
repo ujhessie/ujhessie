@@ -24,7 +24,7 @@ export const Informacoes: React.FC<{
                     <Botao rota={linkVisitar}>Visitar projeto</Botao>
                 ) : null}
                 {linkDeploy ? (
-                    <Botao rota={linkDeploy} tipo='transparente'>
+                    <Botao rota={linkDeploy} tipo='padrao'>
                         Ver deploy
                     </Botao>
                 ) : null}
