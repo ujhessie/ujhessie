@@ -24,7 +24,7 @@ export const Botao: React.FC<iBotao> = ({
 }) => {
     const isExternal = rota.startsWith("http");
 
-    const classContainer = `botao-container my-transition bg-gradient-principal p-1 md:p-1.3 rounded-full flex items-center ${classNameContainer}`;
+    const classContainer = `botao-container my-transition bg-gradient-principal p-1 md:p-1.3 rounded-full inline-flex items-center ${classNameContainer}`;
 
     const classContent = `botao-content my-transition px-6 py-3 rounded-full text-[18px] font-semibold w-full  ${
         tipo === "secundario" ? "  bg-preto-escuro " : null

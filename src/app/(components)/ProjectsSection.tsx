@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
 import MaxWidthContainer from "@/components/ui/MaxWidthContainer";
-import { IoIosArrowForward } from "react-icons/io";
+
 import CardProject from "@/components/ui/CardProject/CardProject";
 import { useProjetos } from "@/contexts/ProjetosContexts";
 import { Botao } from "@/components/ui/Botao/Botao";
@@ -47,7 +47,7 @@ export const ProjectsSection = () => {
                             Veja alguns dos meus <span>projetos</span>
                         </h2>
                     </div>
-                    <div className='text-white'>
+                    <div className='text-white hidden '>
                         <Botao
                             tipo='secundario'
                             rota='/projetos'
@@ -66,8 +66,8 @@ export const ProjectsSection = () => {
                     ))}
                 </div>
 
-                <div className='flex justify-center md:justify-start  text-white'>
-                    <Botao rota='/projetos' className='reveal md:hidden  mb-4'>
+                <div className='flex justify-center md:justify-start reveal md:hidden   text-white'>
+                    <Botao rota='/projetos' className=' mb-4'>
                         Ver todos os projetos
                     </Botao>
                 </div>

@@ -3,7 +3,7 @@ export const Titulo: React.FC<{ titulo: string | undefined }> = ({
 }) => {
     return (
         <div>
-            <p className='titulo-card-projeto  my-transition opacity-80  text-white leading-tight lett  text-[16px] md:text-[18px] lg:text-[20px] font-semibold'>
+            <p className='titulo-card-projeto  my-transition opacity-80  text-white leading-tight lett  text-[18px] md:text-[18px] lg:text-[20px] font-semibold py-2'>
                 {titulo}
             </p>
         </div>

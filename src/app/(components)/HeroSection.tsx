@@ -103,7 +103,7 @@ const RedesSociais = () => {
     };
 
     return (
-        <div className='icons-redes-sociais flex gap-4  items-end  md:flex-col justify-center h-full '>
+        <div className='icons-redes-sociais flex gap-4 justify-center lg:justify-center  md:items-end md:justify-start lg:flex-col  h-full '>
             <IconRedeSocial
                 url='https://github.com/ujhessie/'
                 icon={<Github className=' w-8 h-full' />}
@@ -126,7 +126,7 @@ const RedesSociais = () => {
 
 const Botoes = () => {
     return (
-        <div className='div-botoes flex gap-4 justify-center flex-col md:flex-row md:justify-start'>
+        <div className='div-botoes flex flex-wrap justify-center md:justify-start  gap-2'>
             <Botao rota='/#sec-sobre-mim'>Ver mais sobre mim</Botao>
             <Botao rota='/projetos' tipo='secundario'>
                 Meus projetos
