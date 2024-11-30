@@ -47,7 +47,7 @@ export const ProjectsSection = () => {
                             Veja alguns dos meus <span>projetos</span>
                         </h2>
                     </div>
-                    <div className='text-white hidden '>
+                    <div className='text-white hidden md:block '>
                         <Botao
                             tipo='secundario'
                             rota='/projetos'
@@ -66,8 +66,8 @@ export const ProjectsSection = () => {
                     ))}
                 </div>
 
-                <div className='flex justify-center md:justify-start reveal md:hidden   text-white'>
-                    <Botao rota='/projetos' className=' mb-4'>
+                <div className='flex justify-center md:justify-start  md:hidden   text-white  my-4'>
+                    <Botao rota='/projetos' className=''>
                         Ver todos os projetos
                     </Botao>
                 </div>
