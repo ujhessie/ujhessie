@@ -1,8 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import HomePage from '../pages/HomePage/HomePage';
-import ProjetosPage from '../pages/Projetos/ProjetosPage';
-import ProjetoPage from '../pages/Projetos/ProjetoPage/ProjetoPage';
-import ProjetosAPI from '../pages/API/ProjetosAPI'; // Importando o componente
+import HomePage from "../pages/HomePage/HomePage";
+import ProjetosPage from "../pages/Projetos/ProjetosPage";
+import ProjetoPage from "../pages/Projetos/ProjetoPage/ProjetoPage";
 
 export const MyRoutes = () => {
     return (
@@ -11,8 +10,10 @@ export const MyRoutes = () => {
                 <Routes>
                     <Route path='/' element={<HomePage />} />
                     <Route path='/projetos' element={<ProjetosPage />} />
-                    <Route path='/projetos/:projeto' element={<ProjetoPage />} />
-                    <Route path='/api/projetos' element={<ProjetosAPI />} /> {/* Adicionando a rota */}
+                    <Route
+                        path='/projetos/:projeto'
+                        element={<ProjetoPage />}
+                    />
                 </Routes>
             </Router>
         </>

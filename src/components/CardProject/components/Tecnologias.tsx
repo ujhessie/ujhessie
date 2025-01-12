@@ -1,5 +1,3 @@
-import Tags from "../../Tags/Tags";
-
 export const Tecnologias: React.FC<{ tecnologias: string[] | undefined }> = ({
     tecnologias,
 }) => {
