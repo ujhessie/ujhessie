@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    @apply bg-preto-escuro;
+}
+
+.my-transition {
+    transition: all 200ms ease-in;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    @apply font-titulo;
+
+    span {
+        @apply bg-gradient-principal bg-clip-text text-transparent;
+    }
+}
+
+h1 {
+    @apply text-6xl md:text-6xl lg:text-9xl   inline-block;
+    letter-spacing: 0em;
+    line-height: 0%;
+}
+
+h2 {
+    @apply text-4xl md:text-5xl font-bold;
+    letter-spacing: 0.1em;
+}
+h3 {
+    @apply text-2xl md:text-3xl font-bold;
+    letter-spacing: 0.1em;
+}
+
+.text-normal {
+    @apply opacity-80;
+}
+
+.texto-gradiente {
+    background: linear-gradient(90deg, #ff4949, #bf36ff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.bg-gradiente {
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+    border-image: 20px;
+}
+
+@media (min-width: 639px) {
+    .projetos {
+        column-count: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .projetos {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    .projetos {
+        column-count: 3;
+    }
+}
+body {
+    background-image: url("/images/bg.svg");
+    background-size: cover;
+    background-position: top center;
+}
+
+.borda-gradiente {
+    border-image: linear-gradient(90deg, #f44972, #fe4d58, #d43fc5, #b264f3) 1;
+    border-radius: 300px;
+}
+
+.div-content-projetos-sec-inicio {
+    mask-image: linear-gradient(90deg, transparent, black);
+}
+.div-imgs {
+    .row-image {
+        width: 100%;
+
+        &.left {
+            animation: scroll-left 50s linear infinite;
+        }
+
+        &.right {
+            animation: scroll-right 50s linear infinite;
+        }
+    }
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
