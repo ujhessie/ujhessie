@@ -8,6 +8,7 @@ import {
 import Header from "../../components/Header/Header";
 
 export default function Home() {
+    
     useEffect(() => {
         if (typeof window !== "undefined") {
             import("scrollreveal").then((module) => {

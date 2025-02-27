@@ -2,9 +2,9 @@ import { useMemo } from "react";
 import MaxWidthContainer from "../../../components/MaxWidthContainer";
 import { SubtituloTop } from "../../../components/Subtitulotop/SubtituloTop";
 import { useProjetos } from "../../../contexts/ProjetosContexts";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { Botao } from "../../../components/Botao/Botao";
-import { Github, Instagram, Linkedin, Mail } from "lucide-react";
+// import { Github, Instagram, Linkedin, Mail } from "lucide-react";
 
 export const HeroSection = () => {
     return (
@@ -16,9 +16,9 @@ export const HeroSection = () => {
             <div className='absolute w-full h-full left-0 top-0 bg-gradient-to-r from-preto-escuro/50 to-transparent'></div>
             <MaxWidthContainer className=' py-32 pt-[330px]  gap-4 grid lg:grid-cols-4'>
                 <Div_text />
-                <div className='text-white w-full h-full lg:col-span-1'>
+                {/* <div className='text-white w-full h-full lg:col-span-1'>
                     <RedesSociais />
-                </div>
+                </div> */}
             </MaxWidthContainer>
         </section>
     );
@@ -82,45 +82,46 @@ const Bg_projetos = () => {
     );
 };
 
-const RedesSociais = () => {
-    const IconRedeSocial = ({
-        icon,
-        url = "#",
-    }: {
-        icon: React.ReactNode;
-        url?: string;
-    }) => {
-        return (
-            <Link
-                className='p-3 my-transition bg-gradient-principal/10 bg-gradient-principal hover:scale-110 rounded-full shadow-xl  '
-                to={url}
-            >
-                {icon}
-            </Link>
-        );
-    };
+// const RedesSociais = () => {
+//     const IconRedeSocial = ({
+//         icon,
+//         url = "#",
+//     }: {
+//         icon: React.ReactNode;
+//         url?: string;
+//     }) => {
+//         return (
 
-    return (
-        <div className='icons-redes-sociais flex gap-4 justify-center lg:justify-center  md:items-end md:justify-start lg:flex-col  h-full '>
-            <IconRedeSocial
-                url='https://github.com/ujhessie/'
-                icon={<Github className=' w-8 h-full' />}
-            />
-            <IconRedeSocial
-                url='https://www.instagram.com/ujhessie/'
-                icon={<Instagram className=' w-8 h-full' />}
-            />
-            <IconRedeSocial
-                url='https://www.linkedin.com/in/jesserodrigues4502/'
-                icon={<Linkedin className=' w-8 h-full' />}
-            />
-            <IconRedeSocial
-                url='mailto:juniorrodrigues4502@gmail.com'
-                icon={<Mail className=' w-8 h-full' />}
-            />
-        </div>
-    );
-};
+//             <Link
+//                 className='p-3 my-transition bg-gradient-principal/10 bg-gradient-principal hover:scale-110 rounded-full shadow-xl  '
+//                 to={url}
+//             >
+//                 {icon}
+//             </Link>
+//         );
+//     };
+
+//     return (
+//         <div className='icons-redes-sociais flex gap-4 justify-center lg:justify-center  md:items-end md:justify-start lg:flex-col  h-full '>
+//             <IconRedeSocial
+//                 url='https://github.com/ujhessie/'
+//                 icon={<Github className=' w-8 h-full' />}
+//             />
+//             <IconRedeSocial
+//                 url='https://www.instagram.com/ujhessie/'
+//                 icon={<Instagram className=' w-8 h-full' />}
+//             />
+//             <IconRedeSocial
+//                 url='https://www.linkedin.com/in/jesserodrigues4502/'
+//                 icon={<Linkedin className=' w-8 h-full' />}
+//             />
+//             <IconRedeSocial
+//                 url='mailto:juniorrodrigues4502@gmail.com'
+//                 icon={<Mail className=' w-8 h-full' />}
+//             />
+//         </div>
+//     );
+// };
 
 const Botoes = () => {
     return (
