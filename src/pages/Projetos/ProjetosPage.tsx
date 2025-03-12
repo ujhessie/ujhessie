@@ -1,3 +1,4 @@
+import Header from '../../components/Header/Header';
 import MaxWidthContainer from '../../components/MaxWidthContainer';
 import { Projetos } from '../../components/Projetos/Projetos';
 import { SubtituloTop } from '../../components/Subtitulotop/SubtituloTop';
@@ -9,7 +10,10 @@ import { SubtituloTop } from '../../components/Subtitulotop/SubtituloTop';
 export default function ProjetosPage() {
 
     return (
-        <section className='py-32 pt-16'>
+      <>
+      <Header/>
+      
+      <section className='py-32 pt-16'>
             <MaxWidthContainer className='mb-8 relative'>
                 <div className='header-portfolio items-end mb-8 text-center'>
                     <div>
@@ -24,5 +28,6 @@ export default function ProjetosPage() {
 
         
         </section>
+      </>
     );
 }
